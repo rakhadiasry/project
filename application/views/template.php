@@ -36,7 +36,7 @@
 
     <header class="main-header">
       <!-- Logo -->
-      <a href="<?= base_url() ?>assets/index2.html" class="logo">
+      <a href="<?= site_url('dashboard') ?>" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
@@ -142,7 +142,7 @@
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="<?= base_url() ?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                <span class="hidden-xs">Admin</span>
+                <span class="hidden-xs">Hallo, <?= $this->fungsi->user_login()->username?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -150,12 +150,12 @@
                   <img src="<?= base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    Alexander Pierce - Web Developer
-                    <small>Member since Nov. 2012</small>
+                  <?= $this->fungsi->user_login()->name?>
+                    <small><?= $this->fungsi->user_login()->level == 1 ? "Admin" : "User" ?></small>
                   </p>
                 </li>
                 <!-- Menu Body -->
-                <li class="user-body">
+                <!-- <li class="user-body">
                   <div class="row">
                     <div class="col-xs-4 text-center">
                       <a href="#">Followers</a>
@@ -166,7 +166,7 @@
                     <div class="col-xs-4 text-center">
                       <a href="#">Friends</a>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- /.row -->
                 </li>
                 <!-- Menu Footer-->
@@ -175,7 +175,7 @@
                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="<?= site_url('auth/logout') ?>" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="<?= site_url('auth/logout') ?>" class="btn btn-danger btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -201,8 +201,9 @@
             <img src="<?= base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Alexander Pierce</p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            <p><?= $this->fungsi->user_login()->name?></p>
+            <a href="
+            #"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
         </div>
         <!-- search form -->
@@ -219,18 +220,22 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN NAVIGATION</li>
-          <li class="treeview">
-            <a href="#">
+          <li>
+            <a href="<?= site_url('dashboard') ?>">
               <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
+
               </span>
             </a>
-            <ul class="treeview-menu">
+            <!-- <ul class="treeview-menu">
               <li><a href="<?= base_url() ?>assets/index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
               <li><a href="<?= base_url() ?>assets/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            </ul>
-          </li>
+            </ul> -->
+            <?php if ($this->session->userdata('level') == 1) { ?>
+          <li class="header">Pengaturan</li>
+          <li><a href="<?= site_url('user') ?>"><i class="fa fa-cogs"></i> <span>Account</span></a></li>
+        <?php } ?>
+        <!-- </li>
           <li class="treeview">
             <a href="#">
               <i class="fa fa-files-o"></i>
@@ -386,7 +391,7 @@
           <li class="header">LABELS</li>
           <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+          <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
         </ul>
       </section>
       <!-- /.sidebar -->
