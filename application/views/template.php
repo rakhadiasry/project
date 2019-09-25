@@ -175,7 +175,8 @@
                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="<?= site_url('auth/logout') ?>" class="btn btn-danger btn-flat">Sign out</a>
+                    <a href="<?= site_url('auth/logout') ?>" class="btn btn-danger
+                     btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -231,9 +232,13 @@
               <li><a href="<?= base_url() ?>assets/index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
               <li><a href="<?= base_url() ?>assets/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
             </ul> -->
-            <?php if ($this->session->userdata('level') == 1) { ?>
+            <?php if ($this->fungsi->user_login()->level == 1) { ?>
           <li class="header">Pengaturan</li>
           <li><a href="<?= site_url('user') ?>"><i class="fa fa-cogs"></i> <span>Account</span></a></li>
+        <?php } ?>
+        <?php if ($this->fungsi->user_login()->level == 1) { ?>
+          <li class="header">Data</li>
+          <li><a href="<?= site_url('form') ?>"><i class="fa fa-pencil"></i> <span>Informasi Pap</span></a></li>
         <?php } ?>
         <!-- </li>
           <li class="treeview">
