@@ -87,138 +87,151 @@
                             </div>
                             <div class="form-group">
                                 <label> Lama Tinggal/ Menetap</label><br>
-                                <input type="radio"name="lama_tinggal" value="dari_lahir" <?php if($row->lama_tinggal=='dari_lahir')  {echo "checked";}?>><i>Dari Lahir</i>
-                                <input type="radio" name="lama_tinggal" value="<1th"> <i>Kurang > 1 tahun</i>
-                                <input type="radio" name="lama_tinggal" value="1-5th"> <i>> 1- 5 tahun</i>
+                                <input type="radio" name="lama_tinggal" value="dari_lahir" <?php if($row->lama_tinggal=='dari_lahir')  {echo "checked";}?>><i>Dari Lahir</i>
+                                <input type="radio" name="lama_tinggal" value="<1th" <?php if($row->lama_tinggal=='<1th')  {echo "checked";}?>> <i>Kurang > 1 tahun</i>
+                                <input type="radio" name="lama_tinggal" value="1-5th" <?php if($row->lama_tinggal=='1-5th')  {echo "checked";}?>> <i>> 1- 5 tahun</i>
                                 <br>
-                                <input type="radio" name="lama_tinggal" value="5-10th"> <i>5- 10 tahun</i>
-                                <input type="radio" name="lama_tinggal" value=">10th"> <i>> 10 tahun</i>
+                                <input type="radio" name="lama_tinggal" value="5-10th" <?php if($row->lama_tinggal=='5-10th')  {echo "checked";}?>> <i>5- 10 tahun</i>
+                                <input type="radio" name="lama_tinggal" value=">10th" <?php if($row->lama_tinggal=='>10th')  {echo "checked";}?>> <i>> 10 tahun</i>
                             </div>
                             <div class="form-group">
                                 <label> Suku Asal</label><br>
-                                <input type="radio"name="suku_asal" value="melayu"> <i>Melayu</i>
-                                <input type="radio" name="suku_asal" value="batak"> <i>Batak</i>
-                                <input type="radio" name="suku_asal" value="minangkabau"> <i>Minangkabau</i>
+                                <input type="radio"name="suku_asal" value="melayu" <?php if($row->suku_asal=='melayu')  {echo "checked";}?>> <i>Melayu</i>
+                                <input type="radio" name="suku_asal" value="batak" <?php if($row->suku_asal=='batak')  {echo "checked";}?>> <i>Batak</i>
+                                <input type="radio" name="suku_asal" value="minangkabau" <?php if($row->suku_asal=='minangkabau')  {echo "checked";}?>> <i>Minangkabau</i>
                                 <br>
-                                <input type="radio" name="suku_asal" value="jawa"> <i>Jawa</i>
-                                <input type="radio" name="suku_asal" value="sunda"> <i>Sunda</i>
+                                <input type="radio" name="suku_asal" value="jawa" <?php if($row->suku_asal=='jawa')  {echo "checked";}?>> <i>Jawa</i>
+                                <input type="radio" name="suku_asal" value="sunda" <?php if($row->suku_asal=='sunda')  {echo "checked";}?>> <i>Sunda</i>
                             </div>
                             <div class="form-group">
                                 <label> Jumlah Anggota Keluarga</label>
-                                <input type="textarea" name="jumlah_anggota" value="" class="form-control" required>
+                                <input type="textarea" name="jumlah_anggota" value="<?=$row->jumlah_anggota?>" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label> Pendidikan Terakhir</label><br>
-                                <input type="checkbox"name="pendidikan_akhir[]" value="tidak sekolah"> <i>Tidak Sekolah</i>
-                                <input type="checkbox" name="pendidikan_akhir[]" value="tidak tamat sd"> <i>Tidak Tamat SD</i>
-                                <input type="checkbox" name="pendidikan_akhir[]" value="tamat sd"> <i>Tamat SD</i>
+                                <input type="checkbox"name="pendidikan_terakhir" value="tidak_sekolah" <?php if($row->pendidikan_terakhir=='tidak_sekolah')  {echo "checked";}?>> <i>Tidak Sekolah</i>
+                                <input type="checkbox" name="pendidikan_terakhir" value="tidak_tamat_sd" <?php if($row->pendidikan_terakhir=='tidak_tamat_sd')  {echo "checked";}?>> <i>Tidak Tamat SD</i>
+                                <input type="checkbox" name="pendidikan_terakhir" value="tamat_sd" <?php if($row->pendidikan_terakhir=='tamat_sd')  {echo "checked";}?>> <i>Tamat SD</i>
                                 <br>
-                                <input type="checkbox" name="pendidikan_akhir[]" value="tamat sltp"> <i>Tamat SLTP</i>
-                                <input type="checkbox" name="pendidikan_akhir[]" value="tamat slta"> <i>Tamat SLTA</i>
-                                <input type="checkbox" name="pendidikan_akhir[]" value="tamat akademi/d3"> <i>Tamat Akademi/D3</i><br>
-                                <input type="checkbox" name="pendidikan_akhir[]" value="sarjana"> <i>Sarjana</i>
-                                <input type="checkbox" name="pendidikan_akhir[]" value="pascasarjana"> <i>Pascasarjana</i>
+                                <input type="checkbox" name="pendidikan_terakhir" value="tamat_sltp" <?php if($row->pendidikan_terakhir=='tamat_sltp')  {echo "checked";}?>> <i>Tamat SLTP</i>
+                                <input type="checkbox" name="pendidikan_terakhir" value="tamat_slta" <?php if($row->pendidikan_terakhir=='tamat_slta')  {echo "checked";}?>> <i>Tamat SLTA</i>
+                                <input type="checkbox" name="pendidikan_terakhir" value="tamat_akademi/d3" <?php if($row->pendidikan_terakhir=='tamat_akademi/d3')  {echo "checked";}?>> <i>Tamat Akademi/D3</i><br>
+                                <input type="checkbox" name="pendidikan_terakhir" value="sarjana" <?php if($row->pendidikan_terakhir=='sarjana')  {echo "checked";}?>> <i>Sarjana</i>
+                                <input type="checkbox" name="pendidikan_terakhir" value="pascasarjana" <?php if($row->pendidikan_terakhir=='pascasarjana')  {echo "checked";}?>> <i>Pascasarjana</i>
                             </div>
                             <div class="form-group">
                                 <label> Mata Pencarian Utama (Kepala Keluarga)</label><br>
-                                <input type="checkbox"name="pencarian_utama[]" value="pns"> <i>PNS</i>
-                                <input type="checkbox" name="pencarian_utama[]" value="karyawan swasta"> <i>Karyawan Swasta</i>
-                                <input type="checkbox" name="pencarian_utama[]" value="petani"> <i>Honorer</i>
+                                <input type="checkbox"name="pencarian_utama[]" value="pns" <?php if($row->pencarian_utama=='pns')  {echo "checked";}?>> <i>PNS</i>
+                                <input type="checkbox" name="pencarian_utama[]" value="karyawan_swasta" <?php if($row->pencarian_utama=='karyawan_swasta')  {echo "checked";}?>> <i>Karyawan Swasta</i>
+                                <input type="checkbox" name="pencarian_utama[]" value="honorer" <?php if($row->pencarian_utama=='honorer')  {echo "checked";}?>> <i>Honorer</i>
                                 <br>
-                                <input type="checkbox" name="pencarian_utama[]" value="petani"> <i>Petani</i>
-                                <input type="checkbox" name="pencarian_utama[]" value="peternak"> <i>Peternak</i>
-                                <input type="checkbox" name="pencarian_utama[]" value="pedagang"> <i>Pedagang</i><br>
-                                <input type="checkbox" name="pencarian_utama[]" value="buruh"> <i>Buruh</i>
-                                <input type="checkbox" name="pencarian_utama[]" value="supir"> <i>Supir</i>
-                                <input type="checkbox" name="pencarian_utama[]" value="wirausaha"> <i>Wirausaha</i>
+                                <input type="checkbox" name="pencarian_utama[]" value="petani" <?php if($row->pencarian_utama=='petani')  {echo "checked";}?>> <i>Petani</i>
+                               <input type="checkbox" name="pencarian_utama[]" value="peternak" <?php if($row->pencarian_utama=='peternak')  {echo "checked";}?>> <i>Peternak</i>
+                                <input type="checkbox" name="pencarian_utama[]" value="pedagang" <?php if($row->pencarian_utama=='pedagang')  {echo "checked";}?>> <i>Pedagang</i><br>
+                                <input type="checkbox" name="pencarian_utama[]" value="buruh" <?php if($row->pencarian_utama=='buruh')  {echo "checked";}?>> <i>Buruh</i>
+                                <input type="checkbox" name="pencarian_utama[]" value="supir" <?php if($row->pencarian_utama=='supir')  {echo "checked";}?>> <i>Supir</i>
+                                <input type="checkbox" name="pencarian_utama[]" value="wirausaha" <?php if($row->pencarian_utama=='wirausaha')  {echo "checked";}?>> <i>Wirausaha</i>
                             </div>
                             <div class="form-group">
                                 <label> Mata Pencarian Sampingan (Kepala Keluarga & anggota)</label><br>
-                                <input type="checkbox"name="pencarian_kedua[]" value="pns"> <i>PNS</i>
-                                <input type="checkbox" name="pencarian_kedua[]" value="karyawan swasta"> <i>Karyawan Swasta</i>
-                                <input type="checkbox" name="pencarian_kedua[]" value="petani"> <i>Honorer</i>
+                                <input type="checkbox"name="pencarian_kedua[]" value="pns" <?php if($row->pencarian_kedua=='pns')  {echo "checked";}?>> <i>PNS</i>
+                                <input type="checkbox" name="pencarian_kedua[]" value="karyawan_swasta" <?php if($row->pencarian_kedua=='karyawan_swasta')  {echo "checked";}?>> <i>Karyawan Swasta</i>
+                                <input type="checkbox" name="pencarian_kedua[]" value="honorer" <?php if($row->pencarian_kedua=='honorer')  {echo "checked";}?>> <i>Honorer</i>
                                 <br>
-                                <input type="checkbox" name="pencarian_kedua[]" value="petani"> <i>Petani</i>
-                                <input type="checkbox" name="pencarian_kedua[]" value="peternak"> <i>Peternak</i>
-                                <input type="checkbox" name="pencarian_kedua[]" value="pedagang"> <i>Pedagang</i><br>
-                                <input type="checkbox" name="pencarian_kedua[]" value="buruh"> <i>Buruh</i>
-                                <input type="checkbox" name="pencarian_kedua[]" value="supir"> <i>Supir</i>
-                                <input type="checkbox" name="pencarian_kedua[]" value="wirausaha"> <i>Wirausaha</i>
+                                <input type="checkbox" name="pencarian_kedua[]" value="petani" <?php if($row->pencarian_kedua=='petani')  {echo "checked";}?>> <i>Petani</i>
+                                <input type="checkbox" name="pencarian_kedua[]" value="peternak" <?php if($row->pencarian_kedua=='peternak')  {echo "checked";}?>> <i>Peternak</i>
+                                <input type="checkbox" name="pencarian_kedua[]" value="pedagang" <?php if($row->pencarian_kedua=='pedagang')  {echo "checked";}?>> <i>Pedagang</i><br>
+                                <input type="checkbox" name="pencarian_kedua[]" value="buruh" <?php if($row->pencarian_kedua=='buruh')  {echo "checked";}?>> <i>Buruh</i>
+                                <input type="checkbox" name="pencarian_kedua[]" value="supir" <?php if($row->pencarian_kedua=='supir')  {echo "checked";}?>> <i>Supir</i>
+                                <input type="checkbox" name="pencarian_kedua[]" value="wirausaha" <?php if($row->pencarian_kedua=='wirausaha')  {echo "checked";}?>> <i>Wirausaha</i>
                             </div>
                             <div class="form-group">
                                 <label> Jenis Keterampilan kepala keluarga kuasai</label><br>
-                                <input type="checkbox"name="keterampilan_kk[]" value="bertani"> <i>Bertani</i>
-                                <input type="checkbox" name="keterampilan_kk[]" value="berternak"> <i>Beternak</i>
-                                <input type="checkbox" name="keterampilan_kk[]" value="montir/mekanik"> <i>Montir/Mekanik</i>
+                                <input type="checkbox"name="keterampilan_kk[]" value="bertani" <?php if($row->keterampilan_kk=='bertani')  {echo "checked";}?>> <i>Bertani</i>
+                                <input type="checkbox" name="keterampilan_kk[]" value="berternak" <?php if($row->keterampilan_kk=='berternak')  {echo "checked";}?>> <i>Beternak</i>
+                                <input type="checkbox" name="keterampilan_kk[]" value="montir/mekanik" <?php if($row->keterampilan_kk=='montir/mekanik')  {echo "checked";}?>> <i>Montir/Mekanik</i>
                                 <br>
-                                <input type="checkbox" name="keterampilan_kk[]" value="pertukangan kayu/batu"> <i>Pertukangan kayu/batu</i>
-                                <input type="checkbox" name="keterampilan_kk[]" value="listrik"> <i>Listrik</i>
-                                <input type="checkbox" name="keterampilan_kk[]" value="memancing"> <i>Memancing</i><br>
-                                <input type="checkbox" name="keterampilan_kk[]" value="berdagang"> <i>Berdagang</i>
-                                <input type="checkbox" name="keterampilan_kk[]" value="supir"> <i>Supir</i>
-                                <input type="checkbox" name="keterampilan_kk[]" value="penjahit/bordir"> <i>Penjahit/bordir</i>
-                                <input type="checkbox" name="keterampilan_kk[]" value="memasak"> <i>Memasak</i>
+                                <input type="checkbox" name="keterampilan_kk[]" value="pertukangan_kayu/batu" <?php if($row->keterampilan_kk=='pertukangan_kayu/batu')  {echo "checked";}?>> <i>Pertukangan kayu/batu</i>
+                                <input type="checkbox" name="keterampilan_kk[]" value="listrik" <?php if($row->keterampilan_kk=='listrik')  {echo "checked";}?>> <i>Listrik</i>
+                                <input type="checkbox" name="keterampilan_kk[]" value="memancing"<?php if($row->keterampilan_kk=='memancing')  {echo "checked";}?>> <i>Memancing</i><br>
+                                <input type="checkbox" name="keterampilan_kk[]" value="berdagang" <?php if($row->keterampilan_kk=='berdagang')  {echo "checked";}?>> <i>Berdagang</i>
+                                <input type="checkbox" name="keterampilan_kk[]" value="supir" <?php if($row->keterampilan_kk=='supir')  {echo "checked";}?>> <i>Supir</i>
+                                <input type="checkbox" name="keterampilan_kk[]" value="penjahit/bordir" <?php if($row->keterampilan_kk=='penjahit/bordir')  {echo "checked";}?>> <i>Penjahit/bordir</i>
+                                <input type="checkbox" name="keterampilan_kk[]" value="memasak" <?php if($row->keterampilan_kk=='memasak')  {echo "checked";}?>> <i>Memasak</i>
                             </div>
                             <div class="form-group">
                                 <label> Asal keterampilan keterampilan kepala keluarga</label><br>
-                                <input type="checkbox"name="asal_keterampilan_kk[]" value="pns"> <i>Belajar Sendiri</i>
-                                <input type="checkbox" name="asal_keterampilan_kk[]" value="karyawan swasta"> <i>Beternak</i>
-                                <input type="checkbox" name="asal_keterampilan_kk[]" value="petani"> <i>Montir/Mekanik</i>
+                                <input type="checkbox" name="asal_keterampilan_kk[]" value="otodidak" <?php if($row->asal_keterampilan_kk=='otodidak')  {echo "checked";}?>> <i>Belajar Sendiri</i>
+                                <input type="checkbox" name="asal_keterampilan_kk[]" value="kursus" <?php if($row->asal_keterampilan_kk=='kursus')  {echo "checked";}?>> <i>Mengikuti kursus</i><br>
+                                <input type="checkbox" name="asal_keterampilan_kk[]" value="program_pemerintah" <?php if($row->asal_keterampilan_kk=='program_pemerintah')  {echo "checked";}?>> <i>Program Pemerintah</i>
                                 <br>
-                                <input type="checkbox" name="asal_keterampilan_kk[]" value="petani"> <i>Pertukangan kayu/batu</i>
-                                <input type="checkbox" name="asal_keterampilan_kk[]" value="peternak"> <i>Listrik</i>
-                                <input type="checkbox" name="asal_keterampilan_kk[]" value="pedagang"> <i>Memancing</i><br>
-                                <input type="checkbox" name="asal_keterampilan_kk[]" value="buruh"> <i>Berdagang</i>
+                                <input type="checkbox" name="asal_keterampilan_kk[]" value="lsm"<?php if($row->asal_keterampilan_kk=='lsm/ngo')  {echo "checked";}?>> <i>Lsm atau NGO</i>
+                                <input type="checkbox" name="asal_keterampilan_kk[]" value="turun_menurun"<?php if($row->asal_keterampilan_kk=='turun_menurun')  {echo "checked";}?>> <i>Turun Menurun</i><br>
+                                <input type="checkbox" name="asal_keterampilan_kk[]" value="pelatihan_perusahaan" <?php if($row->asal_keterampilan_kk=='pelatihan_perusahaan')  {echo "checked";}?>> <i>Program pelatihan perusahaan</i><br>
                             </div>
                             <div class="form-group">
                                 <label> Jenis keterampilan responden kuasai</label><br>
-                                <input type="checkbox"name="keterampilan_responden[]" value="bertani"> <i>Bertani</i>
-                                <input type="checkbox" name="keterampilan_responden[]" value="berternak"> <i>Beternak</i>
-                                <input type="checkbox" name="keterampilan_responden[]" value="montir/mekanik"> <i>Montir/Mekanik</i>
+                                <input type="checkbox" name="keterampilan_responden[]" value="bertani" <?php if($row->keterampilan_responden=='bertani')  {echo "checked";}?>> <i>Bertani</i>
+                                <input type="checkbox" name="keterampilan_responden[]" value="berternak" <?php if($row->keterampilan_responden=='berternak')  {echo "checked";}?>> <i>Beternak</i>
+                                <input type="checkbox" name="keterampilan_responden[]" value="montir/mekanik" <?php if($row->keterampilan_responden=='montir/mekanik')  {echo "checked";}?>> <i>Montir/Mekanik</i>
                                 <br>
-                                <input type="checkbox" name="keterampilan_responden[]" value="pertukangan kayu/batu"> <i>Pertukangan kayu/batu</i>
-                                <input type="checkbox" name="keterampilan_responden[]" value="listrik"> <i>Listrik</i>
-                                <input type="checkbox" name="keterampilan_responden[]" value="memancing"> <i>Memancing</i><br>
-                                <input type="checkbox" name="keterampilan_responden[]" value="berdagang"> <i>Berdagang</i>
-                                <input type="checkbox" name="keterampilan_responden[]" value="supir"> <i>Supir</i>
-                                <input type="checkbox" name="keterampilan_responden[]" value="penjahit/bordir"> <i>Penjahit/bordir</i>
-                                <input type="checkbox" name="keterampilan_responden[]" value="memasak"> <i>Memasak</i>
-                            </div>
+                                <input type="checkbox" name="keterampilan_responden[]" value="pertukangan_kayu/batu" <?php if($row->keterampilan_responden=='pertukangan_kayu/batu')  {echo "checked";}?>> <i>Pertukangan kayu/batu</i>
+                                <input type="checkbox" name="keterampilan_responden[]" value="listrik" <?php if($row->keterampilan_responden=='listrik')  {echo "checked";}?>> <i>Listrik</i>
+                                <input type="checkbox" name="keterampilan_responden[]" value="memancing"<?php if($row->keterampilan_responden=='memancing')  {echo "checked";}?>> <i>Memancing</i><br>
+                                <input type="checkbox" name="keterampilan_responden[]" value="berdagang" <?php if($row->keterampilan_responden=='berdagang')  {echo "checked";}?>> <i>Berdagang</i>
+                                <input type="checkbox" name="keterampilan_responden[]" value="supir" <?php if($row->keterampilan_responden=='supir')  {echo "checked";}?>> <i>Supir</i>
+                                <input type="checkbox" name="keterampilan_responden[]" value="penjahit/bordir" <?php if($row->keterampilan_responden=='penjahit/bordir')  {echo "checked";}?>> <i>Penjahit/bordir</i>
+                                <input type="checkbox" name="keterampilan_responden[]" value="memasak" <?php if($row->keterampilan_responden=='memasak')  {echo "checked";}?>> <i>Memasak</i>                            
+                                </div>
                             <div class="form-group">
                                 <label> Asal keterampilan keterampilan responden</label><br>
-                                <input type="checkbox"name="asal_keterampilan_responden[]" value="pns"> <i>Belajar Sendiri</i>
-                                <input type="checkbox" name="asal_keterampilan_responden[]" value="karyawan swasta"> <i>Beternak</i>
-                                <input type="checkbox" name="asal_keterampilan_responden[]" value="petani"> <i>Montir/Mekanik</i>
+                         <input type="checkbox" name="asal_keterampilan_responden[]" value="otodidak" <?php if($row->asal_keterampilan_responden=='otodidak')  {echo "checked";}?>> <i>Belajar Sendiri</i>
+                                <input type="checkbox" name="asal_keterampilan_responden[]" value="kursus" <?php if($row->asal_keterampilan_responden=='kursus')  {echo "checked";}?>> <i>Mengikuti kursus</i><br>
+                                <input type="checkbox" name="asal_keterampilan_responden[]" value="program_pemerintah" <?php if($row->asal_keterampilan_responden=='program_pemerintah')  {echo "checked";}?>> <i>Program Pemerintah</i>
                                 <br>
-                                <input type="checkbox" name="asal_keterampilan_responden[]" value="petani"> <i>Pertukangan kayu/batu</i>
-                                <input type="checkbox" name="asal_keterampilan_responden[]" value="peternak"> <i>Listrik</i>
-                                <input type="checkbox" name="asal_keterampilan_responden[]" value="pedagang"> <i>Memancing</i><br>
-                                <input type="checkbox" name="asal_keterampilan_responden[]" value="buruh"> <i>Berdagang</i>
+                                <input type="checkbox" name="asal_keterampilan_responden[]" value="lsm/ngo"<?php if($row->asal_keterampilan_responden=='lsm/ngo')  {echo "checked";}?>> <i>Lsm atau NGO</i>
+                                <input type="checkbox" name="asal_keterampilan_responden[]" value="turun_menurun"<?php if($row->asal_keterampilan_responden=='turun_menurun')  {echo "checked";}?>> <i>Turun Menurun</i><br>
+                                <input type="checkbox" name="asal_keterampilan_responden[]" value="pelatihan_perusahaan" <?php if($row->asal_keterampilan_responden=='pelatihan_perusahaan')  {echo "checked";}?>> <i>Program pelatihan perusahaan</i><br>
                             </div>
-                            <div class="form-group">
+                           <div class="form-group">
                                 <label>Kegiatan apa saja yang bapak & ibu lakukan sehari-hari (kepala keluarga)</label>
-                                <input type="textarea" name="kegiatan_kk" class="form-control" value="" required>
+                                <input type="textarea" name="kegiatan_kk" class="form-control" value="<?=$row->kegiatan_kk?>" required>
                             </div>
                             <div class="form-group">
                                 <label>Berapa kali keluarga makan dalam sehari</label><br>
-                                <input type="radio" name="makan_sehari" value="1x">Satu kali
-                                <input type="radio" name="makan_sehari" value="2x">Dua kali
-                                <input type="radio" name="makan_sehari" value="3x">Tiga kali
+                                <input type="radio" name="makan_sehari" value="1x" <?php if($row->makan_sehari=='1x')  {echo "checked";}?>>Satu kali
+                                <input type="radio" name="makan_sehari" value="2x" <?php if($row->makan_sehari=='2x')  {echo "checked";}?>>Dua kali
+                                <input type="radio" name="makan_sehari" value="3x" <?php if($row->makan_sehari=='3x')  {echo "checked";}?>>Tiga kali
                             </div>
                             <div class="form-group">
                                 <label>Tempat berobat & alasan</label>
-                                <input type="text" name="tempat_berobat" class="form-control" value="" required>
+                                <input type="text" name="tempat_berobat" class="form-control" value="<?=$row->tempat_berobat?>" required>
                             </div>
                             <div class="form-group">
                                 <label>Memiliki jaminan kesehatan</label>
-                                <input type="textarea" name="jaminan_kesehatan" class="form-control" value="" required>
+                                <input type="textarea" name="jaminan_kesehatan" class="form-control" value="<?=$row->jaminan_kesehatan?>" required>
+                            </div>
+                             <div class="form-group">
+                                <label>Penilaian terhadap pelayanyan fasilitas kesehatan (puskesmas,polindes,pustu,klinik dll)</label><br>
+                                <input type="radio" name="penilaian_puskesmas" value="baik" <?php if($row->penilaian_puskesmas=='baik')  {echo "checked";}?>>Baik
+                                <input type="radio" name="penilaian_puskesmas" value="sedang" <?php if($row->penilaian_puskesmas=='sedang')  {echo "checked";}?>>Biasa saja
+                                <input type="radio" name="penilaian_puskesmas" value="buruk" <?php if($row->penilaian_puskesmas=='buruk')  {echo "checked";}?>>Buruk
+                            </div> 
+                            <div class="form-group">
+                                <label>Apakah ada kendala dalam pendidikan anak</label>
+                                <input type="textarea" name="kendala_pendidikan" class="form-control" value="<?=$row->kendala_pendidikan?>" required>
                             </div>
                             <div class="form-group">
-                                <label>Penilaian terhadap pelayanyan fasilitas kesehatan (puskesmas,polindes,pustu,klinik dll)</label><br>
-                                <input type="radio" name="makan_sehari" value="baik">Baik
-                                <input type="radio" name="makan_sehari" value="sedang">Biasa saja
-                                <input type="radio" name="makan_sehari" value="buruk">Buruk
+                                <label>Kondisi sekolah yang ada di desa/kecamatan</label><br>
+                                <input type="radio" name="kondisi_pendidikan" value="baik" <?php if($row->kondisi_pendidikan=='baik')  {echo "checked";}?>>Baik
+                                <input type="radio" name="kondisi_pendidikan" value="sedang" <?php if($row->kondisi_pendidikan=='sedang')  {echo "checked";}?>>Biasa saja
+                                <input type="radio" name="kondisi_pendidikan" value="buruk" <?php if($row->kondisi_pendidikan=='buruk')  {echo "checked";}?>>Buruk
+                            </div> 
+                            <div class="form-group">
+                                <label>Total biaya pengeluaran untuk pendidikan</label>
+                                <input type="textarea" name="biaya_pendidikan" class="form-control" value="<?=$row->biaya_pendidikan?>" required>
                             </div>
+                            
                             <div class="form-group">
                                 <button type="submit" name="<?=$page?>" class="btn btn-success btn-flat">
                                 <i class="fa fa-paper-plane"></i> Save

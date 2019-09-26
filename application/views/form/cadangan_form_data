@@ -1,0 +1,87 @@
+<th>Kendala dalam Pendidikan anak</th>
+                        <th>Kondisi sekolah anak</th>
+                        <th>Total biaya pendidikan</th>
+                        <th>Total luas lahan sebelum proyek</th>
+                        <th>Luas lahan terkena proyek</th>
+                        <th>Jenis tanaman lahan bebas</th>
+                        <th>Status lahan dibebaskan</th> 
+                        <th>Sisa lahan yang dimiliki</th>
+                        <th>Hasil yang di garap</th>
+                        <th>Pertanian dijual ke</th> 
+                        <th>Hasil peternakan</th>
+                        <th>Hasil ternak dijual ke</th> 
+                        <th>Hasil budidaya perikanan</th>
+                        <th>Hasil budidaya dijual</th> 
+                        <th>Hasil tangkapan ikan</th> 
+                        <th>Hasil tangkapan dijual </th>
+                        <th>Hasil hutan</th> 
+                        <th>Kemana hasil hutan dijual</th> 
+                        <th>Hasil galian/tambang</th> 
+                        <th>Mendapatkan izin dari pemerintah ?</th>
+                        <th>Hasil galian/tambang dijual </th> 
+                        <th>Status kepemilikan rumah</th> 
+                        <th>Luas bangunan & lahan</th>
+                        <th>Material bangunan rumah</th>
+                        <th>Kondisi bangunan rumah</th> 
+                        <th>Tahun rumah di bangun</th>
+                        <th>Tahun MCK di bangun</th>
+                        <th>Sumber dana membangun rumah</th>
+                        <th>Jumlah orang dalam rumah</th>
+                        <th>Sirkulasi udara rumah </th> 
+                        <th>Penerangan/ Pencahayaan rumah </th> 
+                        <th>Barang yang dimiliki</th>
+                        <th>Bangunan untuk usaha/ dagang</th>
+                        <th>Sumber penerangan</th>
+                        <th>Sumber air bersih</th>
+                        <th>Sumber air minum</th> 
+                        <th>Sarana mandi & BAB</th>
+                        <th>Pengelolaan sampah </th> 
+                        <th>Pengelolaan limbah cair</th> 
+                        <th>Jumlah kendaraan pribadi</th>
+                        <th>Transporatasi yang biasa dipakai</th>
+                        <th>Menggunakan HP? jumlah</th> 
+                        <th>Uang setelah pembebasan & untuk apa</th>
+                        <th>Memiliki usaha dagang</th>
+                        <th>Omzet usaha dagang</th>
+                        <th>Gaji perbulan </th>
+                        <th>Gaji yang di dapatkan</th>
+                        <th>Kiriman dari orang lain</th>
+                        <th>Jumlah kiriman</th> 
+                        <th>Dana Pensiun</th>
+                        <th>Jumlah dana pensiun</th>
+                        <th>Sumber lain nya </th>
+                        <th>Jumlah sumber lain nya</th>
+                        <th>Total keseluruhan pendapatan perbulan</th>
+                        <th>Pengeluaran sebulan </th>
+                        <th>Pendapatan di banding tahun lalu </th>
+                        <th>Apakah pendapatan cukup untuk kebutuhan </th>
+                        <th>Masalah ekonomi yang dihadapi</th>
+                        <th>Dalam bentuk apa dapat bantuan</th> 
+                        <th>Punya rekening bank ?</th> 
+                        <th>Pinjangan dalam keadaan terdesak</th>
+                        <th>Keperluan meminjam terdesak</th>
+                        
+                        <th>Ada kerjasama gotong royong</th>
+                        <th>Seberapa sering </th> 
+                        <th>partisipasi dalam kegiatan gotong royong </th> 
+                        <th>Partisipasi anda dalam kegiatan masyarakat </th>
+                        <th>Kegiatan yang aktif dilakukan</th>
+                        <th>Kegiatan agama yang aktif</th>
+                        <th>Sumber pengetahuan pertanian,kesehatan dll</th>
+                        <th>Ikut terlibat organisasi tertentu</th>
+                        <th>jika ikut, nama organisasi</th> 
+                        <th>posisi dalam organisasi</th> 
+                        <th>Tingkat partisipasi</th> 
+                        <th>Manfaat yang di peroleh organisasi</th> 
+                        <th>Kondisi keamanan lingkungan</th> 
+                        <th>berikan alasan kemanan </th>
+                        <th>Pernah terjadi konflik </th> 
+                        <th>Jika pernah jelaskan</th>
+                        <th>Siapa saja yang terlibat</th> 
+                        <th>Pihak mana yang menyelesaikan</th> 
+                        <th>Mekanisme penyelesaian </th> 
+                        <th>Bencana yang sering terjadi</th>
+                        <!-- Persepsi-->
+                        <th>Pendapat tentang perushaan SERD</th>
+                        <th>Apa saja yang di berikan</th>
+                        <th>Saran untuk perushaan SERD</th>
