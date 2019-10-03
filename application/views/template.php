@@ -12,7 +12,9 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
+  
   <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -621,6 +623,9 @@
   <script src="<?= base_url() ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
   <script src="<?= base_url() ?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="<?= base_url() ?>assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url() ?>assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
   <!-- SlimScroll -->
   <script src="<?= base_url() ?>assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
   <!-- FastClick -->
@@ -629,11 +634,22 @@
   <script src="<?= base_url() ?>assets/dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="<?= base_url() ?>assets/dist/js/demo.js"></script>
+  <script src="<?= base_url() ?>assets/bower_components/chart.js/Chart.js"></script>
+
   <script>
     $(document).ready(function() {
       $('.sidebar-menu').tree()
     })
   </script>
+   <script>
+    $(document).ready(function(){$('#select-all').click(function(event){if(this.checked){$('.checkbox1').each(function(){this.checked=true;});}else{$('.checkbox1').each(function(){this.checked=false;});}});});
+    </script>
+    <script>
+    $(document).ready(function(){
+      $('#table1').DataTable()
+    })
+    </script>
+ 
 </body>
 
 </html>

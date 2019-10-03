@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="box-body table-responsive">
-            <table class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped" id="table1">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -42,6 +42,7 @@
                         <th>Lama Tinggal</th> 
                         <th>Suku Asal</th>
                         <th>Jumlah Anggota Keluarga</th> 
+                        <th>Pendidikan Terakhir Kepala Keluarga</th> 
                         <th>Pendidikan Terakhir Responden</th> 
                         <th>Mata Pencarian Utama KK</th> 
                         <th>Mata Pencarian Kedua KK</th>
@@ -57,26 +58,27 @@
                         <th>Kendala dalam Pendidikan anak</th>
                         <th>Kondisi sekolah anak</th>
                         <th>Total biaya pendidikan</th>
-                      <!--  <th>Total luas lahan sebelum proyek</th>
+                        <th>Total luas lahan sebelum proyek</th>
                         <th>Luas lahan terkena proyek</th>
+                        <th>Total luas lahan setelah proyek</th>
                         <th>Jenis tanaman lahan bebas</th>
                         <th>Status lahan dibebaskan</th> 
-                        <th>Sisa lahan yang dimiliki</th>
-                        <th>Hasil yang di garap</th>
+                        <th>Hasil Pertanian</th>
                         <th>Pertanian dijual ke</th> 
                         <th>Hasil peternakan</th>
                         <th>Hasil ternak dijual ke</th> 
                         <th>Hasil budidaya perikanan</th>
                         <th>Hasil budidaya dijual</th> 
                         <th>Hasil tangkapan ikan</th> 
-                        <th>Hasil tangkapan dijual </th>
+                        <th>Hasil tangkapan ikan dijual </th>
                         <th>Hasil hutan</th> 
                         <th>Kemana hasil hutan dijual</th> 
                         <th>Hasil galian/tambang</th> 
                         <th>Mendapatkan izin dari pemerintah ?</th>
                         <th>Hasil galian/tambang dijual </th> 
                         <th>Status kepemilikan rumah</th> 
-                        <th>Luas bangunan & lahan</th>
+                        <th>Luas bangunan</th>
+                        <th>Luas lahan</th>
                         <th>Material bangunan rumah</th>
                         <th>Kondisi bangunan rumah</th> 
                         <th>Tahun rumah di bangun</th>
@@ -93,10 +95,14 @@
                         <th>Sarana mandi & BAB</th>
                         <th>Pengelolaan sampah </th> 
                         <th>Pengelolaan limbah cair</th> 
-                        <th>Jumlah kendaraan pribadi</th>
+                        <th>Jumlah sepeda</th>
+                        <th>Jumlah motor</th>
+                        <th>Jumlah mobil</th>
+                        <th>Jumlah truck</th>
                         <th>Transporatasi yang biasa dipakai</th>
-                        <th>Menggunakan HP? jumlah</th> 
-                        <th>Uang setelah pembebasan & untuk apa</th>
+                        <th>Jumlah hp yang dimiliki</th> 
+                        <th>Uang setelah pembebasan</th>
+                        <th>Digunakan untuk apa uang nya</th>
                         <th>Memiliki usaha dagang</th>
                         <th>Omzet usaha dagang</th>
                         <th>Gaji perbulan </th>
@@ -110,7 +116,9 @@
                         <th>Total keseluruhan pendapatan perbulan</th>
                         <th>Pengeluaran sebulan </th>
                         <th>Pendapatan di banding tahun lalu </th>
+                        <th>Alasan pendapatan tahun lalu</th>
                         <th>Apakah pendapatan cukup untuk kebutuhan </th>
+                        <th>Alasan pendapat kebutuhan Sehari-hari</th>
                         <th>Masalah ekonomi yang dihadapi</th>
                         <th>Dalam bentuk apa dapat bantuan</th> 
                         <th>Punya rekening bank ?</th> 
@@ -120,7 +128,6 @@
                         <th>Ada kerjasama gotong royong</th>
                         <th>Seberapa sering </th> 
                         <th>partisipasi dalam kegiatan gotong royong </th> 
-                        <th>Partisipasi anda dalam kegiatan masyarakat </th>
                         <th>Kegiatan yang aktif dilakukan</th>
                         <th>Kegiatan agama yang aktif</th>
                         <th>Sumber pengetahuan pertanian,kesehatan dll</th>
@@ -129,6 +136,7 @@
                         <th>posisi dalam organisasi</th> 
                         <th>Tingkat partisipasi</th> 
                         <th>Manfaat yang di peroleh organisasi</th> 
+                        
                         <th>Kondisi keamanan lingkungan</th> 
                         <th>berikan alasan kemanan </th>
                         <th>Pernah terjadi konflik </th> 
@@ -141,7 +149,7 @@
                         <th>Pendapat tentang perushaan SERD</th>
                         <th>Apa saja yang di berikan</th>
                         <th>Saran untuk perushaan SERD</th>
-                         -->
+                         
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -166,12 +174,13 @@
                             <td><?= $data->lama_tinggal?></td>
                             <td><?= $data->suku_asal?></td>
                             <td><?= $data->jumlah_anggota?></td>
-                            <td><?= $data->pendidikan_terakhir?></td>
+                            <td><?= $data->pendidikan_terakhir_kk?></td>
+                            <td><?= $data->pendidikan_terakhir_responden?></td>
                             <td><?= $data->pencarian_utama?></td>
                             <td><?= $data->pencarian_kedua?></td>
                             <td><?= $data->keterampilan_kk?></td>
                             <td><?= $data->asal_keterampilan_kk?></td>
-                            <td><?= $data->keterampilan_responden?></td>
+                            <td><?= $data->keterampilan_responden?></td> 
                             <td><?= $data->asal_keterampilan_responden?></td>
                             <td><?= $data->kegiatan_kk?></td>
                             <td><?= $data->makan_sehari?></td>
@@ -181,11 +190,11 @@
                             <td><?= $data->kendala_pendidikan?></td>
                             <td><?= $data->kondisi_pendidikan?></td>
                             <td><?= $data->biaya_pendidikan?></td>
-                            <!--<td><?= $data->total_lahan?></td>
+                            <td><?= $data->total_lahan?></td>
                             <td><?= $data->luas_proyek_lahan?></td>
+                            <td><?= $data->total_proyek_lahan?></td>
                             <td><?= $data->jenis_tanaman_lahan?></td>
                             <td><?= $data->status_lahan?></td>
-                            <td><?= $data->sisa_lahan?></td>
                             <td><?= $data->hasil_pertanian?></td>
                             <td><?= $data->jual_pertanian?></td>
                             <td><?= $data->hasil_peternakan?></td>
@@ -200,14 +209,15 @@
                             <td><?= $data->izin_tambang?></td>
                             <td><?= $data->jual_tambang?></td>
                             <td><?= $data->status_rumah?></td>
-                            <td><?= $data->luas_bl?></td>
+                            <td><?= $data->luas_bangunan?></td>
+                            <td><?= $data->luas_lahan?></td>
                             <td><?= $data->material_bangunan?></td>
                             <td><?= $data->kondisi_bangunan?></td>
                             <td><?= $data->rumah_dibangun?></td>
                             <td><?= $data->mck_dibangun?></td>
                             <td><?= $data->sumber_dana?></td>
                             <td><?= $data->jumlah_orang?></td>
-                            <td><?= $data->sirkulasi_udara?></td>
+                            <td><?= $data->sirkulasi_rumah?></td>
                             <td><?= $data->pencahayaan_rumah?></td>
                             <td><?= $data->barang_dimiliki?></td>
                             <td><?= $data->bangunan_usaha?></td>
@@ -217,10 +227,14 @@
                             <td><?= $data->sarana_mandi?></td>
                             <td><?= $data->pengelolaan_sampah?></td>
                             <td><?= $data->pengelolaan_cair?></td>
-                            <td><?= $data->jumlah_kendaraan?></td>
+                            <td><?= $data->jumlah_sepeda?></td>
+                            <td><?= $data->jumlah_motor?></td>
+                            <td><?= $data->jumlah_mobil?></td>
+                            <td><?= $data->jumlah_truck?></td>
                             <td><?= $data->transportasi?></td>
                             <td><?= $data->menggunakan_hp?></td>
                             <td><?= $data->uang_lahan?></td>
+                            <td><?= $data->alasan_lahan?></td>
                             <td><?= $data->usaha_dagang?></td>
                             <td><?= $data->omzet_dagang?></td>
                             <td><?= $data->gaji_perbulan?></td>
@@ -234,12 +248,15 @@
                             <td><?= $data->total_keseluruhan?></td>
                             <td><?= $data->pengeluaran_sebulan?></td>
                             <td><?= $data->banding_pendapatan?></td>
+                            <td><?= $data->alasan_banding?></td>
                             <td><?= $data->pendapatan_cukup?></td>
+                            <td><?= $data->alasan_pendapat?></td>
                             <td><?= $data->masalah_ekonomi?></td>
                             <td><?= $data->bentuk_bantuan?></td>
                             <td><?= $data->punya_rekening?></td>
                             <td><?= $data->pinjaman_mendesak?></td>
                             <td><?= $data->keperluan_meminjam?></td>
+
                             <td><?= $data->kerjasama_lingkungan?></td>
                             <td><?= $data->banyak_kerjasama?></td>
                             <td><?= $data->partisipasi_kerjasama?></td>
@@ -251,6 +268,7 @@
                             <td><?= $data->posisi_organisasi?></td>
                             <td><?= $data->tingkat_partisipasi?></td>
                             <td><?= $data->manfaat_organisasi?></td>
+
                             <td><?= $data->keamanan_lingkungan?></td>
                             <td><?= $data->alasan_keamanan?></td>
                             <td><?= $data->pernah_konflik?></td>
@@ -261,7 +279,7 @@
                             <td><?= $data->bencana_alam?></td>
                             <td><?= $data->pendapat_serd?></td>
                             <td><?= $data->manfaat_serd?></td>
-                            <td><?= $data->saran_serd?></td> -->
+                            <td><?= $data->saran_serd?></td>
                             <td class="text-center" width="160px">
                                 <a href="<?= site_url('form/edit/'.$data->pap_id) ?>" class="btn btn-warning btn-xs">
                                     <i class="fa fa-pencil"></i> Edit
@@ -275,6 +293,7 @@
                 </tbody>
             </table>
         </div>
+        
     </div>
 
 </section>
