@@ -3,19 +3,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Form extends CI_Controller
 {
-    function __construct(){
+    function __construct()
+    {
         parent::__construct();
         check_not_login();
         $this->load->model('form_m');
     }
-	public function index()
-	{
+    public function index()
+    {
         $data['row'] = $this->form_m->get();
-		$this->template->load('template', 'form/form_data',$data);
+        $data['dataif'] = $this->form_m->get_sum_count_if();
+        $this->template->load('template', 'form/form_data', $data);
     }
-    
 
-    public function add(){
+
+    public function add()
+    {
         $form = new stdClass();
         $form->nama_enumerator = null;
         $form->nomor_enumerator = null;
@@ -35,7 +38,7 @@ class Form extends CI_Controller
         $form->suku_asal = null;
         $form->jumlah_anggota = null;
         $form->pendidikan_terakhir_kk = null;
-        $form->pendidikan_terakhir_responden = null;  
+        $form->pendidikan_terakhir_responden = null;
         $form->pencarian_utama = null;
         $form->pencarian_kedua = null;
         $form->keterampilan_kk = null;
@@ -70,11 +73,11 @@ class Form extends CI_Controller
         $form->status_rumah = null;
         $form->luas_bangunan = null;
         $form->luas_lahan = null;
-        $form->total_proyek_lahan =null;
+        $form->total_proyek_lahan = null;
         $form->material_bangunan = null;
         $form->kondisi_bangunan = null;
         $form->rumah_dibangun = null;
-        $form->mck_dibangun = null; 
+        $form->mck_dibangun = null;
         $form->sumber_dana = null;
         $form->jumlah_orang = null;
         $form->sirkulasi_rumah = null;
@@ -117,8 +120,8 @@ class Form extends CI_Controller
         $form->pinjaman_mendesak = null;
         $form->keperluan_meminjam = null;
         //sumber daya sosial
-        $form->kerjasama_lingkungan= null;
-        $form->banyak_kerjasama= null;
+        $form->kerjasama_lingkungan = null;
+        $form->banyak_kerjasama = null;
         $form->partisipasi_kerjasama = null;
         $form->kegiatan_aktif = null;
         $form->kegiatan_agama = null;
@@ -126,68 +129,68 @@ class Form extends CI_Controller
         $form->terlibat_organisasi = null;
         $form->nama_organisasi = null;
         $form->posisi_organisasi = null;
-        $form->tingkat_partisipasi= null;
+        $form->tingkat_partisipasi = null;
         $form->manfaat_organisasi = null;
 
-        $form->keamanan_lingkungan= null;
-        $form->alasan_keamanan= null;
+        $form->keamanan_lingkungan = null;
+        $form->alasan_keamanan = null;
         $form->pernah_konflik = null;
         $form->alasan_konflik = null;
-        $form->terlibat_konflik = null ;
+        $form->terlibat_konflik = null;
         $form->pihak_konflik = null;
         $form->mekanisme_konflik = null;
         $form->bencana_alam = null;
         $form->pendapat_serd = null;
-        $form->manfaat_serd = null ;
-        $form->saran_serd = null ;
+        $form->manfaat_serd = null;
+        $form->saran_serd = null;
         $data = array(
             'page' => 'add',
             'row' => $form
         );
 
-        $this->template->load('template', 'form/form_multi',$data );
+        $this->template->load('template', 'form/form_multi', $data);
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $query = $this->form_m->get($id);
-        if($query->num_rows() > 0){
+        if ($query->num_rows() > 0) {
             $form = $query->row();
 
             $data = array(
                 'page' => 'edit',
                 'row' => $form,
             );
-            $this->template->load('template', 'form/form_multi',$data);
-        }else{
+            $this->template->load('template', 'form/form_multi', $data);
+        } else {
             echo "<script>alert('Data tidak ditemukan');";
-            echo "window.location='".site_url('form')."';</script>";
+            echo "window.location='" . site_url('form') . "';</script>";
         }
     }
 
-    public function process(){
+    public function process()
+    {
         $post = $this->input->post(null, TRUE);
-        if(isset($_POST['add'])){
+        if (isset($_POST['add'])) {
             $this->form_m->add($post);
-        }else if(isset($_POST['edit'])){
+        } else if (isset($_POST['edit'])) {
             $this->form_m->edit($post);
-            
         }
-         
-        if($this->db->affected_rows() > 0) {
+
+        if ($this->db->affected_rows() > 0) {
             echo "<script>alert('Data Berhasil di simpan');</script>";
         }
-        echo "<script>window.location='".site_url('form')."';</script>";
+        echo "<script>window.location='" . site_url('form') . "';</script>";
     }
 
 
     public function del($id)
     {
         $this->form_m->del($id);
-       
-        if($this->db->affected_rows() > 0) {
+
+        if ($this->db->affected_rows() > 0) {
             echo "<script>alert('Data Berhasil di hapus');</script>";
         }
-        echo "<script>window.location='".site_url('form')."';</script>";
+        echo "<script>window.location='" . site_url('form') . "';</script>";
     }
 }
-

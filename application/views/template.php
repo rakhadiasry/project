@@ -12,7 +12,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  
+
   <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
@@ -20,14 +20,11 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/dist/css/skins/_all-skins.min.css">
-
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="assets/dist/css/skins/_all-skins.min.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -144,7 +141,7 @@
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="<?= base_url() ?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                <span class="hidden-xs">Hallo, <?= $this->fungsi->user_login()->username?></span>
+                <span class="hidden-xs">Hallo, <?= $this->fungsi->user_login()->username ?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -152,7 +149,7 @@
                   <img src="<?= base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                  <?= $this->fungsi->user_login()->name?>
+                    <?= $this->fungsi->user_login()->name ?>
                     <small><?= $this->fungsi->user_login()->level == 1 ? "Admin" : "User" ?></small>
                   </p>
                 </li>
@@ -169,24 +166,24 @@
                       <a href="#">Friends</a>
                     </div>
                   </div> -->
-                  <!-- /.row -->
-                </li>
-                <!-- Menu Footer-->
-                <li class="user-footer">
-                  <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  </div>
-                  <div class="pull-right">
-                    <a href="<?= site_url('auth/logout') ?>" class="btn btn-danger
+                <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+              <div class="pull-left">
+                <a href="#" class="btn btn-default btn-flat">Profile</a>
+              </div>
+              <div class="pull-right">
+                <a href="<?= site_url('auth/logout') ?>" class="btn btn-danger
                      btn-flat">Sign out</a>
-                  </div>
-                </li>
-              </ul>
+              </div>
             </li>
-            <!-- Control Sidebar Toggle Button -->
-            <li>
-              <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-            </li>
+          </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
           </ul>
         </div>
       </nav>
@@ -204,7 +201,7 @@
             <img src="<?= base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p><?= $this->fungsi->user_login()->name?></p>
+            <p><?= $this->fungsi->user_login()->name ?></p>
             <a href="
             #"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
@@ -242,166 +239,9 @@
           <li class="header">Data</li>
           <li><a href="<?= site_url('form') ?>"><i class="fa fa-pencil"></i> <span>Informasi Pap</span></a></li>
         <?php } ?>
-        <!-- </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-files-o"></i>
-              <span>Layout Options</span>
-              <span class="pull-right-container">
-                <span class="label label-primary pull-right">4</span>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-              <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-              <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-              <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="../widgets.html">
-              <i class="fa fa-th"></i> <span>Widgets</span>
-              <span class="pull-right-container">
-                <small class="label pull-right bg-green">Hot</small>
-              </span>
-            </a>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-pie-chart"></i>
-              <span>Charts</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-              <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-              <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-              <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-laptop"></i>
-              <span>UI Elements</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-              <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-              <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-              <li><a href="../UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-              <li><a href="../UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-              <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-edit"></i> <span>Forms</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-              <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-              <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-table"></i> <span>Tables</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-              <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="../calendar.html">
-              <i class="fa fa-calendar"></i> <span>Calendar</span>
-              <span class="pull-right-container">
-                <small class="label pull-right bg-red">3</small>
-                <small class="label pull-right bg-blue">17</small>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="../mailbox/mailbox.html">
-              <i class="fa fa-envelope"></i> <span>Mailbox</span>
-              <span class="pull-right-container">
-                <small class="label pull-right bg-yellow">12</small>
-                <small class="label pull-right bg-green">16</small>
-                <small class="label pull-right bg-red">5</small>
-              </span>
-            </a>
-          </li>
-          <li class="treeview active">
-            <a href="#">
-              <i class="fa fa-folder"></i> <span>Examples</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-              <li><a href="profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-              <li><a href="login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-              <li><a href="register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-              <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-              <li><a href="404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-              <li><a href="500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-              <li class="active"><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-              <li><a href="pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-share"></i> <span>Multilevel</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-              <li class="treeview">
-                <a href="#"><i class="fa fa-circle-o"></i> Level One
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                  <li class="treeview">
-                    <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                      <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                      </span>
-                    </a>
-                    <ul class="treeview-menu">
-                      <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                      <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-            </ul>
-          </li>
-          <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-          <li class="header">LABELS</li>
-          <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
+
         </ul>
       </section>
-      <!-- /.sidebar -->
     </aside>
 
     <!-- =============================================== -->
@@ -634,22 +474,131 @@
   <script src="<?= base_url() ?>assets/dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="<?= base_url() ?>assets/dist/js/demo.js"></script>
+  <!--Chart Js-->
   <script src="<?= base_url() ?>assets/bower_components/chart.js/Chart.js"></script>
+
 
   <script>
     $(document).ready(function() {
       $('.sidebar-menu').tree()
     })
   </script>
-   <script>
-    $(document).ready(function(){$('#select-all').click(function(event){if(this.checked){$('.checkbox1').each(function(){this.checked=true;});}else{$('.checkbox1').each(function(){this.checked=false;});}});});
-    </script>
-    <script>
-    $(document).ready(function(){
+  <script>
+    $(document).ready(function() {
+      $('#select-all').click(function(event) {
+        if (this.checked) {
+          $('.checkbox1').each(function() {
+            this.checked = true;
+          });
+        } else {
+          $('.checkbox1').each(function() {
+            this.checked = false;
+          });
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
       $('#table1').DataTable()
+
+    });
+  </script>
+  <script>
+    // jumlah kelamin 
+    $(function() {
+      var pieChartCanvas = $('#jmlkChart').get(0).getContext('2d')
+      var pieChart = new Chart(pieChartCanvas)
+      var PieData = [{
+          value: <?= $dataif->jml_pria; ?>,
+          color: '#f56954',
+          highlight: '#f56954',
+          label: 'Pria'
+        },
+        {
+          value: <?= $dataif->jml_wanita; ?>,
+          color: '#00a65a',
+          highlight: '#00a65a',
+          label: 'Wanita'
+        }
+      ]
+      var pieOptions = {
+        //Boolean - Whether we should show a stroke on each segment
+        segmentShowStroke: true,
+        //String - The colour of each segment stroke
+        segmentStrokeColor: '#fff',
+        //Number - The width of each segment stroke
+        segmentStrokeWidth: 2,
+        //Number - The percentage of the chart that we cut out of the middle
+        percentageInnerCutout: 50, // This is 0 for Pie charts
+        //Number - Amount of animation steps
+        animationSteps: 100,
+        //String - Animation easing effect
+        animationEasing: 'easeOutBounce',
+        //Boolean - Whether we animate the rotation of the Doughnut
+        animateRotate: true,
+        //Boolean - Whether we animate scaling the Doughnut from the centre
+        animateScale: false,
+        //Boolean - whether to make the chart responsive to window resizing
+        responsive: true,
+        // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+        maintainAspectRatio: true,
+        //String - A legend template
+        legendTemplate: '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+      }
+      //Create pie or douhnut chart
+      // You can switch between pie and douhnut using the method below.
+      pieChart.Doughnut(PieData, pieOptions)
     })
-    </script>
- 
+  </script>
+  <script>
+    // jumlah suku 
+    $(function() {
+      var pieChartCanvas = $('#sukuChart').get(0).getContext('2d')
+      var Chart = new Chart(pieChartCanvas)
+      var PieData = [{
+          value: <?= $dataif->suku_minangkabau; ?>,
+          color: '#f56954',
+          highlight: '#f56954',
+          label: 'Minangkabau'
+        },
+        {
+          value: <?= $dataif->suku_jawa; ?>,
+          color: '#00a65a',
+          highlight: '#00a65a',
+          label: 'Jawa'
+        }
+      ]
+      var pieOptions = {
+        //Boolean - Whether we should show a stroke on each segment
+        segmentShowStroke: true,
+        //String - The colour of each segment stroke
+        segmentStrokeColor: '#fff',
+        //Number - The width of each segment stroke
+        segmentStrokeWidth: 2,
+        //Number - The percentage of the chart that we cut out of the middle
+        percentageInnerCutout: 50, // This is 0 for Pie charts
+        //Number - Amount of animation steps
+        animationSteps: 100,
+        //String - Animation easing effect
+        animationEasing: 'easeOutBounce',
+        //Boolean - Whether we animate the rotation of the Doughnut
+        animateRotate: true,
+        //Boolean - Whether we animate scaling the Doughnut from the centre
+        animateScale: false,
+        //Boolean - whether to make the chart responsive to window resizing
+        responsive: true,
+        // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+        maintainAspectRatio: true,
+        //String - A legend template
+        legendTemplate: '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+      }
+      //Create pie or douhnut chart
+      // You can switch between pie and douhnut using the method below.
+      pieChart.Doughnut(PieData, pieOptions)
+    })
+  </script>
+
 </body>
 
 </html>
