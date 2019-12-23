@@ -55,6 +55,7 @@ class Form extends CI_Controller
         $form->biaya_pendidikan = null;
         $form->total_lahan = null;
         $form->luas_proyek_lahan = null;
+        $form->total_proyek_lahan = null;
         $form->jenis_tanaman_lahan = null;
         $form->status_lahan = null;
         $form->hasil_pertanian = null;
@@ -73,7 +74,7 @@ class Form extends CI_Controller
         $form->status_rumah = null;
         $form->luas_bangunan = null;
         $form->luas_lahan = null;
-        $form->total_proyek_lahan = null;
+        $form->tipe_bangunan = null;
         $form->material_bangunan = null;
         $form->kondisi_bangunan = null;
         $form->rumah_dibangun = null;

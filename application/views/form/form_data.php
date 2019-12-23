@@ -79,6 +79,7 @@
                         <th>Status kepemilikan rumah</th>
                         <th>Luas bangunan</th>
                         <th>Luas lahan</th>
+                        <th>Tipe Bangunan</th>
                         <th>Material bangunan rumah</th>
                         <th>Kondisi bangunan rumah</th>
                         <th>Tahun rumah di bangun</th>
@@ -211,6 +212,7 @@
                             <td><?= $data->status_rumah ?></td>
                             <td><?= $data->luas_bangunan ?></td>
                             <td><?= $data->luas_lahan ?></td>
+                            <td><?= $data->tipe_bangunan?> </td>
                             <td><?= $data->material_bangunan ?></td>
                             <td><?= $data->kondisi_bangunan ?></td>
                             <td><?= $data->rumah_dibangun ?></td>
@@ -310,6 +312,8 @@
                     </div>
                     <div class="box-body">
                         <canvas id="jmlkChart" style="height:100px"></canvas>
+                        <i> Pria <i><?= $dataif->jml_pria ?></i></i><br>
+                        <i> Wanita <i><?= $dataif->jml_wanita ?></i></i> 
                     </div>
                     <!-- /.box-body -->
                 </div>
@@ -323,14 +327,748 @@
                             </button>
                             <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                         </div>
-                        <i> Minangkabau <i><?= $dataif->suku_minangkabau ?></i></i>
                     </div>
                     <div class="box-body">
                         <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-7" >
+                            <i> Minangkabau <i><?= $dataif->suku_minangkabau ?></i></i> <br>
+                            <i> Jawa <i><?= $dataif->suku_jawa ?></i></i> <br>
+                            <i> Sunda <i><?= $dataif->suku_sunda ?></i></i> <br>
+                        </div>
+                        <div class="col-md-5">
+                            <i> Melayu <i><?= $dataif->suku_melayu ?></i></i>
+                            <i> Batak <i><?= $dataif->suku_batak ?></i></i>
+                            <i> Lainnya <i><?= $dataif->suku_lainnya ?></i></i>
+                        </div>
                     </div>
-                    <!-- /.box-body -->
-                </div>
+                    
+            </div>
+            </div>
+        <div class="col-md-3">
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Agama PAP</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Islam <i><?= $dataif->agama_islam ?></i></i> <br>
+                            <i> Protestan <i><?= $dataif->agama_protestan ?></i></i> <br>
+                            <i> Katolik <i><?= $dataif->agama_katolik ?></i></i> <br>
+                            <i> Lainnya <i><?= $dataif->agama_lainnya ?></i></i>
+
+                        </div>
+                        <div class="col-md-6">
+                            <i> Hindu <i><?= $dataif->agama_hindu ?></i></i><br>
+                            <i> Budha <i><?= $dataif->agama_budha ?></i></i>
+                            <i> Konghucu <i><?= $dataif->agama_konghucu ?></i></i>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Lama Tinggal PAP</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Dari Lahir <i> : <?= $dataif->lama_lahir ?></i></i> <br>
+                            <i> >1th <i> : <?= $dataif->lama_1th ?></i></i> <br>
+                            <i> >1-5th <i> : <?= $dataif->lama_5th ?></i></i> <br>
+
+                        </div>
+                        <div class="col-md-6">
+                            <i> 5-10th <i> : <?= $dataif->lama_10th ?></i></i><br>
+                            <i> >10th <i> : <?= $dataif->lama_10thh ?></i></i>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        </div>
+<div class="row">
+    <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Usia PAP</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> <?="<25th"?> <i> : <?= $dataif->usia_25th ?></i></i> <br>
+                            <i> 25-35th <i> : <?= $dataif->usia_25thh ?></i></i> <br>
+                            <i> 36th-45th <i> : <?= $dataif->usia_36th ?></i></i> <br>
+                            <i> 46th-55th <i> : <?= $dataif->usia_46th ?></i></i><br>
+
+                        </div>
+                        <div class="col-md-6">
+                            <i> 56th-60th <i> : <?= $dataif->usia_56th ?></i></i><br>
+                            <i> 61th-65th <i> : <?= $dataif->usia_61th ?></i></i><br>
+                            <i> <?=">65"?> <i> : <?= $dataif->usia_65th ?></i></i><br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Pendidikan PAP</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="row">
+                        <div class="col-md-6">
+                            <i>Tidak Sekolah <i> : <?= $dataif->pendidikan_ts ?></i></i> <br>
+                            <i>Tidak Tamat SD <i> : <?= $dataif->pendidikan_tts ?></i></i> <br>
+                            <i>Tamat SD <i> : <?= $dataif->pendidikan_tsd ?></i></i> <br>
+                            <i>Tamat SLTP <i> : <?= $dataif->pendidikan_tsltp ?></i></i> <br>
+                            <i>Tamat SLTA <i> : <?= $dataif->pendidikan_tslta?></i></i> <br>
+
+                        </div>
+                        <div class="col-md-6">
+                            <i>Akamdemi/D3 <i> : <?= $dataif->pendidikan_tad3 ?></i></i><br>
+                            <i>Sarjana <i> : <?= $dataif->pendidikan_tsarjana ?></i></i><br>
+                            <i>Pascasarjana<i> : <?= $dataif->pendidikan_tpasca ?></i></i><br>
+                            <i>Lainnya<i> : <?= $dataif->pendidikan_lainnya ?></i></i><br>
+
+                        </div>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div> <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Keterampilan PAP</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="row">
+                        <div class="col-md-6">
+                            <i> Bertani <i> : <?= $dataif->keterampilan_bertani ?></i></i> <br>
+                            <i> Berternak <i> : <?= $dataif->keterampilan_berternak ?></i></i> <br>
+                            <i> Montir <i> : <?= $dataif->keterampilan_montir ?></i></i> <br>
+                            <i> Pertukangan <i> : <?= $dataif->keterampilan_pertukangan ?></i></i> <br>
+                            <i> Listrik<i> : <?= $dataif->keterampilan_listrik?></i></i> <br>
+                            <i> Memancing<i> : <?= $dataif->keterampilan_memancing?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                        <i> Berdagang <i> : <?= $dataif->keterampilan_berdagang?></i></i> <br>
+                        <i> Supir<i> : <?= $dataif->keterampilan_supir?></i></i> <br>   
+                        <i> Penjahit<i> : <?= $dataif->keterampilan_penjahit?></i></i> <br>
+                        <i> Memasak<i> : <?= $dataif->keterampilan_memasak?></i></i> <br>
+                        <i> Lainnya<i> : <?= $dataif->keterampilan_lainnya ?></i></i> <br>
+                        <i> Tidak ada <i> : <?= $dataif->keterampilan_tidak ?></i></i> <br>
+                    </div>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div> 
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Asal Keterampilan PAP</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Otodidak <i> : <?= $dataif->asal_otodidak ?></i></i> <br>
+                            <i> Kursus <i> : <?= $dataif->asal_kursus ?></i></i> <br>
+                            <i> Lsm <i> : <?= $dataif->asal_lsm ?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Program pemerintah<i> : <?= $dataif->asal_program ?></i></i><br>
+                            <i> Turun Menurun <i> : <?= $dataif->asal_turun?></i></i><br>
+                            <i> Pelatihan Perusahaan <i> : <?= $dataif->asal_pelatihan?></i></i>
+
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        
+</div>
+<div class="row">
+<div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Penilaian Puskesmas</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Baik <i> : <?= $dataif->penilaian_baik?></i></i> <br>
+                            <i> Sedang <i> : <?= $dataif->penilaian_sedang ?></i></i> <br>
+                            <i> Buruk <i> : <?= $dataif->penilaian_buruk ?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Kondisi Pendidikan</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Baik <i> : <?= $dataif->kondisi_baik?></i></i> <br>
+                            <i> Sedang <i> : <?= $dataif->kondisi_sedang ?></i></i> <br>
+                            <i> Buruk <i> : <?= $dataif->kondisi_buruk ?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+<div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Sumber Dana Rumah PAP</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Pribadi <i> : <?= $dataif->sumber_pribadi ?></i></i> <br>
+                            <i> Bantuan Kerabat <i> : <?= $dataif->sumber_pribadi ?></i></i> <br>
+                            <i> Pinjaman <i> : <?= $dataif->sumber_pribadi ?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Bantuan Pemerintah<i> : <?= $dataif->sumber_pemerintah ?></i></i><br>
+                            <i> Lainnya <i> : <?= $dataif->sumber_lainnya?></i></i>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Chart Status Lahan PAP</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Pribadi <i> : <?= $dataif->status_pribadi ?></i></i> <br>
+                            <i> Orang Tua <i> : <?= $dataif->status_orang ?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Bersama<i> : <?= $dataif->status_bersama ?></i></i><br>
+                            <i> Lainnya <i> : <?= $dataif->status_lainnya ?></i></i>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+       
+</div>
+<div class="row">
+    <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Tipe Bangunan Rumah</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Permanen <i> : <?= $dataif->tipe_permanen ?></i></i> <br>
+                            <i> Semi Permanen <i> : <?= $dataif->tipe_semi ?></i></i> <br>
+                            <i> Tidak Permanen<i> : <?= $dataif->tipe_tidak ?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Kondisi Bangunan Rumah</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Bagus & Terawat <i> : <?= $dataif->kondisi_terawat ?></i></i> <br>
+                            <i> Kurang Terawat <i> : <?= $dataif->kondisi_kurang?></i></i> <br>
+                            <i> Usang & Rusak<i> : <?= $dataif->kondisi_rusak ?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Sirkulasi Udara Rumah</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Ada <i> : <?= $dataif->sirkulasi_ada ?></i></i> <br>
+                            <i> Tidak ada <i> : <?= $dataif->sirkulasi_tidak?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Pencahayaan Rumah</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Baik <i> : <?= $dataif->pencahayaan_baik ?></i></i> <br>
+                            <i> Sedang <i> : <?= $dataif->pencahayaan_sedang?></i></i> <br>
+                            <i> Buruk <i> : <?= $dataif->pencahayaan_buruk?></i></i> <br>
+
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+</div>
+<div class="row">
+<div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Sumber Penerangan</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Pln <i> : <?= $dataif->sumber_pln ?></i></i> <br>
+                            <i> Lampu Minyak <i> : <?= $dataif->sumber_lampu?></i></i> <br>
+                            <i> Genset Pribadi<i> : <?= $dataif->sumber_gensetp?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Genset Desa <i> : <?= $dataif->sumber_gensetd ?></i></i> <br>
+                            <i> Genset Tetangga <i> : <?= $dataif->sumber_gensett?></i></i> <br>
+                            <i> Sumber Lainnya<i> : <?= $dataif->sumber_lainnya?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Sumber Air</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Pdam <i> : <?= $dataif->sumber_pdam ?></i></i> <br>
+                            <i> Pipa Desa <i> : <?= $dataif->sumber_pipanisasi?></i></i> <br>
+                            <i> Sumur<i> : <?= $dataif->sumber_sumur?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Mata Air <i> : <?= $dataif->sumber_mata ?></i></i> <br>
+                            <i> Sungai <i> : <?= $dataif->sumber_sungai?></i></i> <br>
+                            <i> Sumber Lainya<i> : <?= $dataif->sumber_lain?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Air Minum </h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Sungai <i> : <?= $dataif->air_sungai ?></i></i> <br>
+                            <i> Sumur <i> : <?= $dataif->air_sumur?></i></i> <br>
+                            <i> Mineral<i> : <?= $dataif->air_mineral?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Hujan <i> : <?= $dataif->air_hujan ?></i></i> <br>
+                            <i> Mata Air <i> : <?= $dataif->air_mata?></i></i> <br>
+                            <i> Pdam<i> : <?= $dataif->air_pdam?></i></i> <br>
+                            <i> Sumber Lain<i> : <?= $dataif->air_lainnya?></i></i><br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Sarana Mandi </h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Sarana Keluarga <i> : <?= $dataif->sarana_keluarga ?></i></i> <br>
+                            <i> Sarana Umum <i> : <?= $dataif->sarana_umum?></i></i> <br>
+                            <i> Sungai<i> : <?= $dataif->sarana_sungai?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Hujan <i> : <?= $dataif->sarana_tempat ?></i></i> <br>
+                            <i> Mata Air <i> : <?= $dataif->sarana_lainnya?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+</div>
+<div class="row">
+<div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Pengelolaan Sampah RT</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Diangkut Petugas <i> : <?= $dataif->pengelolaan_petugas ?></i></i> <br>
+                            <i> Dibakar <i> : <?= $dataif->pengelolaan_dibakar?></i></i> <br>
+                            <i> Sungai<i> : <?= $dataif->pengelolaan_sungai?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Sembarangan <i> : <?= $dataif->pengelolaan_sembarangan ?></i></i> <br>
+                            <i> Lainnya <i> : <?= $dataif->pengelolaan_lainnya?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Pengelolaan Sampah Cair</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Septictank <i> : <?= $dataif->cair_septictank ?></i></i> <br>
+                            <i> Parit<i> : <?= $dataif->cair_parit?></i></i> <br>
+                            <i> Kesungai<i> : <?= $dataif->cair_sungai?></i></i> <br>
+                            <i> Lainnya<i> : <?= $dataif->cair_lainnya?></i></i> <br>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Transportasi </h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Umum <i> : <?= $dataif->transportasi_umum ?></i></i> <br>
+                            <i> Ojek<i> : <?= $dataif->transportasi_ojek?></i></i> <br>
+                            <i> Travel<i> : <?= $dataif->transportasi_travel?></i></i> <br>
+                            <i> Lainnya<i> : <?= $dataif->transportasi_lainnya?></i></i> <br>
+                            <i> Tidak<i> : <?= $dataif->transportasi_tidak?></i></i> <br>
+
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">PAP Berdagang </h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Iya <i> : <?= $dataif->usaha_iya ?></i></i> <br>
+                            <i> Tidak<i> : <?= $dataif->usaha_tidak?></i></i> <br>
+                        
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+</div>
+<div class="row">
+<div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">PAP Mendapatkan Gaji  </h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Iya <i> : <?= $dataif->gaji_iya ?></i></i> <br>
+                            <i> Tidak<i> : <?= $dataif->gaji_tidak?></i></i> <br>
+                        
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Uang Kiriman PAP  </h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Iya <i> : <?= $dataif->kiriman_iya ?></i></i> <br>
+                            <i> Tidak<i> : <?= $dataif->kiriman_tidak?></i></i> <br>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Dana Pensiun PAP  </h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Iya <i> : <?= $dataif->dana_iya ?></i></i> <br>
+                            <i> Tidak<i> : <?= $dataif->dana_tidak?></i></i> <br>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Sumber Lain</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Iya <i> : <?= $dataif->sumber_iya ?></i></i> <br>
+                            <i> Tidak<i> : <?= $dataif->sumber_tidak?></i></i> <br>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+        </div>
+    <div class="row">
+    <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Penilaian Pendapatan</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Meningkat <i> : <?= $dataif->banding_meningkat ?></i></i> <br>
+                            <i> Sama<i> : <?= $dataif->banding_sama?></i></i> <br>
+                            <i> Menurun<i> : <?= $dataif->banding_menurun?></i></i> <br>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Pendapatan cukup</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Lebih <i> : <?= $dataif->banding_meningkat ?></i></i> <br>
+                            <i> Cukup<i> : <?= $dataif->banding_sama?></i></i> <br>
+                            <i> Kurang<i> : <?= $dataif->banding_menurun?></i></i> <br>
+                        </div>
+                    </div>  
             </div>
         </div>
 
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Bentuk Bantuan</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-6">
+                            <i> Uang <i> : <?= $dataif->bentuk_uang ?></i></i> <br>
+                            <i> Barang Pokok<i> : <?= $dataif->bentuk_pokok?></i></i> <br>
+                            <i> Barang Produksi<i> : <?= $dataif->bentuk_produksi?></i></i> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <i> Lainnya<i> : <?= $dataif->bentuk_lainnya ?></i></i> <br>
+                            <i> Tidak Pernah<i> : <?= $dataif->bentuk_tidak?></i></i> <br>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+        <div class="col-md-3">  
+                <div class="box box-danger">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Memiliki Rekening</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <canvas id="sukuChart" style="height:100px"></canvas>
+                        <div class="col-md-12">
+                            <i> Iya <i> : <?= $dataif->punya_iya?></i></i> <br>
+                            <i> Tidak<i> : <?= $dataif->punya_tidak?></i></i> <br>
+                        </div>
+
+                    </div>  
+            </div>
+        </div>
+    </div>
+</div>
 </section>

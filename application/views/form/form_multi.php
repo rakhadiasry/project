@@ -40,37 +40,41 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <form action="<?= site_url('form/process') ?>" method="post">
+                    <p class="h2"><ins>BIODATA ENUMERATOR</ins><p>
                         <div class="form-group">
-                            <label> Nama Enumerator</label>
+                            <label>1. Nama Enumerator</label>
                             <input type="hidden" name="id" value="<?= $row->pap_id ?>">
                             <input type="text" name="name_enum" value="<?= $row->nama_enumerator ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Nomor Enumerator</label>
+                            <label>2. Nomor Enumerator</label>
                             <input type="text" name="nomor_enum" value="<?= $row->nomor_enumerator ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Nama Kabupaten</label>
+                            <label>3. Nama Kabupaten</label>
                             <input type="text" name="na_kab" value="<?= $row->nama_kabupaten ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Kecamatan</label>
+                            <label>4. Kecamatan</label>
                             <input type="text" name="kecamatan" value="<?= $row->kecamatan ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Desa</label>
+                            <label>5. Desa</label>
                             <input type="text" name="desa" value="<?= $row->desa ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Dusun/ Kampung</label>
+                            <label>6. Dusun/ Kampung</label>
                             <input type="text" name="kampung" value="<?= $row->kampung ?>" class="form-control" required>
                         </div>
+                        <br>
+                        <p class="h2"><u>BIODATA DIRI PAP</u></p>
+                        
                         <div class="form-group">
-                            <label> Nama Kepala Keluarga</label>
+                            <label>7. Nama Kepala Keluarga</label>
                             <input type="text" name="name_kk" value="<?= $row->nama_kk ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Usia Kepala Keluarga</label><br>
+                            <label>8. Usia Kepala Keluarga</label><br>
                             <input type="radio" <?php if ($row->usia_kk == '<25th') {
                                                     echo "checked";
                                                 } ?> name="usia_kk" value="<25th"> <i>kurang 25th</i><br>
@@ -94,11 +98,11 @@
                                                 } ?> name="usia_kk" value=">65th"> <i>lebih dari 65th</i><br>
                         </div>
                         <div class="form-group">
-                            <label> Nama Responden</label>
+                            <label>9. Nama Responden</label>
                             <input type="text" name="name_responden" value="<?= $row->nama_responden ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Usia Responden</label><br>
+                            <label>10. Usia Responden</label><br>
                             <input type="radio" <?php if ($row->usia_responden == '<25th') {
                                                     echo "checked";
                                                 } ?> name="usia_responden" value="<25th"> <i>kurang 25th</i><br>
@@ -122,7 +126,7 @@
                                                 } ?> name="usia_responden" value=">65th"> <i>lebih dari 65th</i><br>
                         </div>
                         <div class="form-group">
-                            <label> Jenis kelamin*</label><br>
+                            <label>11. Jenis kelamin*</label><br>
                             <input type="radio" <?php if ($row->jenis_kelamin == 'pria') {
                                                     echo "checked";
                                                 } ?> name="jk[]" value="pria"> <i>Pria</i>
@@ -131,36 +135,36 @@
                                                 } ?> name="jk[]" value="wanita"> <i>Wanita</i>
                         </div>
                         <div class="form-group">
-                            <label> Nomor Responden</label>
+                            <label>12. Nomor Responden</label>
                             <input type="text" name="nomor_res" value="<?= $row->nomor_res ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Agama Responden</label><br>
+                            <label>13. Agama Responden</label><br>
                             <input type="radio" name="agama_res" value="islam" <?php if ($row->agama_res == 'islam') {
                                                                                     echo "checked";
                                                                                 } ?> /> <i>Islam</i><br>
-                            <input type="radio" name="agama_res" value="kristen protestan" <?php if ($row->agama_res == 'kristen protestan') {
+                            <input type="radio" name="agama_res" value="kristen protestan" <?php if ($row->agama_res == 'protestan') {
                                                                                                 echo "checked";
                                                                                             } ?> /> <i>Kristen Protestan</i> <br>
-                            <input type="radio" name="agama_res" value="kristen katolik" <?php if ($row->agama_res == 'kristen katolik') {
+                            <input type="radio" name="agama_res" value="kristen katolik" <?php if ($row->agama_res == 'katolik') {
                                                                                                 echo "checked";
-                                                                                            } ?>><i>Kristen Katolik</i> <br>
+                                                                                            } ?>> <i>Kristen Katolik</i> <br>
                             <input type="radio" name="agama_res" value="hindu" <?php if ($row->agama_res == 'hindu') {
                                                                                     echo "checked";
-                                                                                } ?>><i>Hindu</i> <br>
+                                                                                } ?>> <i>Hindu</i> <br>
                             <input type="radio" name="agama_res" value="budha" <?php if ($row->agama_res == 'budha') {
                                                                                     echo "checked";
                                                                                 } ?>> <i>Budha</i> <br>
                             <input type="radio" name="agama_res" value="konghucu" <?php if ($row->agama_res == 'konghucu') {
                                                                                         echo "checked";
-                                                                                    } ?>><i>Konghucu</i> <br>
+                                                                                    } ?>> <i>Konghucu</i> <br>
                             <input type="radio" name="agama_res" value="lainnya" <?php if ($row->agama_res == 'lainnya') {
                                                                                         echo "checked";
-                                                                                    } ?>><i>Lainnya</i> <br>
+                                                                                    } ?>> <i>Lainnya</i> <br>
 
                         </div>
                         <div class="form-group">
-                            <label> Lama Tinggal/ Menetap</label><br>
+                            <label>14. Lama Tinggal/ Menetap</label><br>
                             <input type="radio" name="lama_tinggal" value="dari lahir" <?php if ($row->lama_tinggal == 'dari lahir') {
                                                                                             echo "checked";
                                                                                         } ?>> <i>Dari Lahir</i> <br>
@@ -172,13 +176,13 @@
                                                                                     } ?>> <i>> 1- 5 tahun</i> <br>
                             <input type="radio" name="lama_tinggal" value="5-10th" <?php if ($row->lama_tinggal == '5-10th') {
                                                                                         echo "checked";
-                                                                                    } ?>> <i>5- 10 tahun</i> <br>
+                                                                                    } ?>> <i>5 - 10 tahun</i> <br>
                             <input type="radio" name="lama_tinggal" value=">10th" <?php if ($row->lama_tinggal == '>10th') {
                                                                                         echo "checked";
                                                                                     } ?>> <i>> 10 tahun</i> <br>
                         </div>
                         <div class="form-group">
-                            <label> Suku Asal</label><br>
+                            <label>15. Suku Asal</label><br>
                             <input type="radio" name="suku_asal" value="melayu" <?php if ($row->suku_asal == 'melayu') {
                                                                                     echo "checked";
                                                                                 } ?>> <i>Melayu</i> <br>
@@ -200,11 +204,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label> Jumlah Anggota Keluarga</label>
+                            <label>16. Jumlah Anggota Keluarga</label>
                             <input type="textarea" name="jumlah_anggota" value="<?= $row->jumlah_anggota ?>" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label> Pendidikan Terakhir Kepala Keluarga</label><br>
+                            <label>17. Pendidikan Terakhir Kepala Keluarga</label><br>
                             <input type="radio" name="pendidikan_terakhir_kk" value="tidak sekolah" <?php if ($row->pendidikan_terakhir_kk == 'tidak sekolah') {
                                                                                                         echo "checked";
                                                                                                     } ?>> <i>Tidak Sekolah</i> <br>
@@ -234,7 +238,7 @@
                                                                                                     } ?>> <i>Pendidikan Lainnya</i> <br>
                         </div>
                         <div class="form-group">
-                            <label> Pendidikan Terakhir Responden</label><br>
+                            <label>18. Pendidikan Terakhir Responden</label><br>
                             <input type="radio" name="pendidikan_terakhir_responden" value="tidak sekolah" <?php if ($row->pendidikan_terakhir_responden == 'tidak sekolah') {
                                                                                                                 echo "checked";
                                                                                                             } ?>> <i>Tidak Sekolah</i> <br>
@@ -264,7 +268,7 @@
                                                                                                             } ?>> <i>Pendidikan Lainnya</i> <br>
                         </div>
                         <div class="form-group">
-                            <label> Mata Pencarian Utama (Kepala Keluarga)</label><br>
+                            <label>19. Mata Pencarian Utama (Kepala Keluarga)</label><br>
                             <input type="checkbox" name="pencarian_utama[]" value="pns" <?php if ($row->pencarian_utama == 'pns') {
                                                                                             echo "checked";
                                                                                         } ?>> <i>PNS</i> <br>
@@ -297,7 +301,7 @@
                                                                                             } ?>> <i>Pekerjaan lainnya</i> <br>
                         </div>
                         <div class="form-group">
-                            <label> Mata Pencarian lain (Kepala Keluarga & anggota)</label><br>
+                            <label>20. Mata Pencarian lain (Kepala Keluarga & anggota)</label><br>
                             <input type="checkbox" name="pencarian_kedua[]" value="pns" <?php if ($row->pencarian_kedua == 'pns') {
                                                                                             echo "checked";
                                                                                         } ?>> <i>PNS</i> <br>
@@ -330,7 +334,7 @@
                                                                                             } ?>> <i>Pekerjaan Lainnya</i> <br>
                         </div>
                         <div class="form-group">
-                            <label> Jenis Keterampilan kepala keluarga kuasai</label><br>
+                            <label>21.Jenis Keterampilan kepala keluarga kuasai</label><br>
                             <input type="checkbox" name="keterampilan_kk[]" value="bertani" <?php if ($row->keterampilan_kk == 'bertani') {
                                                                                                 echo "checked";
                                                                                             } ?>> <i>Bertani</i> <br>
@@ -364,10 +368,13 @@
                             <input type="checkbox" name="keterampilan_kk[]" value="lainnya" <?php if ($row->keterampilan_kk == 'lainnya') {
                                                                                                 echo "checked";
                                                                                             } ?>> <i>Jenis keterampilan lainnya</i> <br>
+                            <input type="checkbox" name="keterampilan_kk[]" value="tidak ada" <?php if ($row->keterampilan_kk == 'tidak ada') {
+                                                                                                echo "checked";
+                                                                                            } ?>> <i>Tidak ada</i>
 
                         </div>
                         <div class="form-group" class="checkbox1">
-                            <label> Asal keterampilan keterampilan kepala keluarga</label><br>
+                            <label>22. Asal keterampilan keterampilan kepala keluarga</label><br>
                             <input type="checkbox" name="asal_keterampilan_kk[]" value="otodidak" <?php if ($row->asal_keterampilan_kk == 'otodidak') {
                                                                                                         echo "checked";
                                                                                                     } ?>> <i>Belajar Sendiri</i> <br>
@@ -388,7 +395,7 @@
                                                                                                                 } ?>> <i>Program pelatihan perusahaan</i><br>
                         </div>
                         <div class="form-group">
-                            <label> Jenis keterampilan responden kuasai</label><br>
+                            <label>23. Jenis keterampilan responden kuasai</label><br>
                             <input type="checkbox" name="keterampilan_responden[]" value="bertani" <?php if ($row->keterampilan_responden == 'bertani') {
                                                                                                         echo "checked";
                                                                                                     } ?>> <i>Bertani</i> <br>
@@ -422,10 +429,14 @@
                             <input type="checkbox" name="keterampilan_responden[]" value="lainnya" <?php if ($row->keterampilan_responden == 'lainnya') {
                                                                                                         echo "checked";
                                                                                                     } ?>> <i>Jenis keterampilan lainnya</i> <br>
+                            <input type="checkbox" name="keterampilan_responden[]" value="tidak ada" <?php if ($row->keterampilan_responden == 'tidak ada') {
+                                                                                                        echo "checked";
+                                                                                                    } ?>> <i>Tidak ada</i>
+                                                                                                    
 
                         </div>
                         <div class="form-group">
-                            <label> Asal keterampilan keterampilan responden</label><br>
+                            <label>24. Asal keterampilan keterampilan responden</label><br>
                             <input type="checkbox" name="asal_keterampilan_responden[]" value="otodidak" <?php if ($row->asal_keterampilan_responden == 'otodidak') {
                                                                                                                 echo "checked";
                                                                                                             } ?>> <i>Belajar Sendiri</i> <br>
@@ -446,7 +457,7 @@
                                                                                                                         } ?>> <i>Program pelatihan perusahaan</i><br>
                         </div>
                         <div class="form-group">
-                            <label>Kegiatan apa saja yang bapak & ibu lakukan sehari-hari (kepala keluarga)</label>
+                            <label>25. Kegiatan apa saja yang bapak & ibu lakukan sehari-hari (kepala keluarga)</label>
                             <input type="textarea" name="kegiatan_kk" class="form-control" value="<?= $row->kegiatan_kk ?>" required>
                         </div>
                         <div class="form-group">
@@ -462,15 +473,15 @@
                                                                                 } ?>>Tiga kali <br>
                         </div>
                         <div class="form-group">
-                            <label>Tempat berobat & alasan</label>
+                            <label>26. Tempat berobat & alasan</label>
                             <input type="text" name="tempat_berobat" class="form-control" value="<?= $row->tempat_berobat ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Memiliki jaminan kesehatan</label>
+                            <label>27. Memiliki jaminan kesehatan</label>
                             <input type="textarea" name="jaminan_kesehatan" class="form-control" value="<?= $row->jaminan_kesehatan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Penilaian terhadap pelayanyan fasilitas kesehatan (puskesmas,polindes,pustu,klinik dll)</label><br>
+                            <label>28. Penilaian terhadap pelayanyan fasilitas kesehatan (puskesmas,polindes,pustu,klinik dll)</label><br>
                             <input type="radio" name="penilaian_puskesmas" value="baik" <?php if ($row->penilaian_puskesmas == 'baik') {
                                                                                             echo "checked";
                                                                                         } ?>>Baik <br>
@@ -482,11 +493,11 @@
                                                                                             } ?>>Buruk <br>
                         </div>
                         <div class="form-group">
-                            <label>Apakah ada kendala dalam pendidikan anak</label>
+                            <label>29. Apakah ada kendala dalam pendidikan anak</label>
                             <input type="textarea" name="kendala_pendidikan" class="form-control" value="<?= $row->kendala_pendidikan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kondisi sekolah yang ada di desa/kecamatan</label><br>
+                            <label>30. Kondisi sekolah yang ada di desa/kecamatan</label><br>
                             <input type="radio" name="kondisi_pendidikan" value="baik" <?php if ($row->kondisi_pendidikan == 'baik') {
                                                                                             echo "checked";
                                                                                         } ?>>Baik <br>
@@ -498,27 +509,27 @@
                                                                                         } ?>>Buruk <br>
                         </div>
                         <div class="form-group">
-                            <label>Total biaya pengeluaran untuk pendidikan</label>
+                            <label>31. Total biaya pengeluaran untuk pendidikan</label>
                             <input type="textarea" name="biaya_pendidikan" class="form-control" value="<?= $row->biaya_pendidikan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Total luas lahan yang dimiliki sebelum pembebasan proyek</label>
+                            <label>32. Total luas lahan yang dimiliki sebelum pembebasan proyek</label>
                             <input type="textarea" name="total_lahan" class="form-control" value="<?= $row->total_lahan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Luas lahan yang terkena pembebasan proyek</label>
+                            <label>33. Luas lahan yang terkena pembebasan proyek</label>
                             <input type="textarea" name="luas_proyek_lahan" class="form-control" value="<?= $row->luas_proyek_lahan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Total luas lahan setelah terkena pembebasan proyek</label>
+                            <label>34. Total luas lahan setelah terkena pembebasan proyek</label>
                             <input type="textarea" name="total_proyek_lahan" class="form-control" value="<?= $row->total_proyek_lahan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Jenis tanaman yang di tanam di atas lahan yang di bebaskan</label>
+                            <label>35. Jenis tanaman yang di tanam di atas lahan yang di bebaskan</label>
                             <input type="textarea" name="jenis_tanaman_lahan" class="form-control" value="<?= $row->jenis_tanaman_lahan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Status lahan yang di bebaskan</label><br>
+                            <label>35. Status lahan yang di bebaskan</label><br>
                             <input type="radio" name="status_lahan" value="pribadi" <?php if ($row->status_lahan == 'pribadi') {
                                                                                         echo "checked";
                                                                                     } ?>>Milik Pribadi <br>
@@ -534,11 +545,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Hasil pertanian di atas lahan yang di garap saat ini</label>
+                            <label>36. Hasil pendapatan dari pertanian di atas lahan yang di garap saat ini</label>
                             <input type="textarea" name="hasil_pertanian" class="form-control" value="<?= $row->hasil_pertanian ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kemana hasil jual pertanian?</label><br>
+                            <label>37. Kemana hasil jual pertanian?</label><br>
                             <input type="radio" name="jual_pertanian" value="tetangga" <?php if ($row->jual_pertanian == 'tetangga') {
                                                                                             echo "checked";
                                                                                         } ?>>Tetangga <br>
@@ -557,11 +568,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Hasil peternakan di atas lahan yang di garap saat ini</label>
+                            <label>38. Hasil pendapatan dari peternakan </label>
                             <input type="textarea" name="hasil_peternakan" class="form-control" value="<?= $row->hasil_peternakan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kemana hasil jual peternakan?</label><br>
+                            <label>39. Kemana hasil jual peternakan?</label><br>
                             <input type="radio" name="jual_peternakan" value="tetangga" <?php if ($row->jual_peternakan == 'tetangga') {
                                                                                             echo "checked";
                                                                                         } ?>>Tetangga <br>
@@ -580,11 +591,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Hasil budidaya perikanan</label>
+                            <label>40. Hasil pendapatan dari budidaya perikanan</label>
                             <input type="textarea" name="hasil_budidaya" class="form-control" value="<?= $row->hasil_budidaya ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kemana hasil jual perikanan?</label><br>
+                            <label>42. Kemana hasil jual perikanan?</label><br>
                             <input type="radio" name="jual_budidaya" value="tetangga" <?php if ($row->jual_budidaya == 'tetangga') {
                                                                                             echo "checked";
                                                                                         } ?>>Tetangga <br>
@@ -603,11 +614,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Hasil tangkapan ikan</label>
+                            <label>43. Hasil pendapatan dari tangkapan ikan</label>
                             <input type="textarea" name="hasil_ikan" class="form-control" value="<?= $row->hasil_ikan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kemana hasil jual tangkapan ikan?</label><br>
+                            <label>44. Kemana hasil jual tangkapan ikan?</label><br>
                             <input type="radio" name="jual_ikan" value="tetangga" <?php if ($row->jual_ikan == 'tetangga') {
                                                                                         echo "checked";
                                                                                     } ?>>Tetangga <br>
@@ -626,11 +637,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Hasil hutan </label>
+                            <label>45. Hasil pendapatan dari hutan </label>
                             <input type="textarea" name="hasil_hutan" class="form-control" value="<?= $row->hasil_hutan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kemana hasil jual dari hutan?</label><br>
+                            <label>46. Kemana hasil jual dari hutan?</label><br>
                             <input type="radio" name="jual_hutan" value="tetangga" <?php if ($row->jual_hutan == 'tetangga') {
                                                                                         echo "checked";
                                                                                     } ?>>Tetangga <br>
@@ -649,64 +660,76 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Hasil galian/ pertambangan</label>
+                            <label>47. Hasil pendapatan dari galian/ pertambangan</label>
                             <input type="textarea" name="hasil_tambang" class="form-control" value="<?= $row->hasil_tambang ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah dalam melakukan usaha penggalian dan pertambangan memiliki ijin dari pemerintah daerah?</label>
+                            <label>48. Apakah dalam melakukan usaha penggalian dan pertambangan memiliki ijin dari pemerintah daerah?</label>
                             <input type="textarea" name="izin_tambang" class="form-control" value="<?= $row->izin_tambang ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kemana hasil jual pertambangan?</label><br>
+                            <label>49. Kemana hasil jual pertambangan?</label><br>
                             <input type="radio" name="jual_tambang" value="tetangga" <?php if ($row->jual_tambang == 'tetangga') {
                                                                                             echo "checked";
-                                                                                        } ?>>Tetangga <br>
+                                                                                        } ?>> Tetangga <br>
                             <input type="radio" name="jual_tambang" value="pasar" <?php if ($row->jual_tambang == 'pasar') {
                                                                                         echo "checked";
-                                                                                    } ?>>Pasar Desa/Lokal<br>
+                                                                                    } ?>> Pasar Desa/Lokal<br>
                             <input type="radio" name="jual_tambang" value="tengkulak" <?php if ($row->jual_tambang == 'tengkulak') {
                                                                                             echo "checked";
-                                                                                        } ?>>Tengkulak/Toke <br>
+                                                                                        } ?>> Tengkulak/Toke <br>
                             <input type="radio" name="jual_tambang" value="pengumpul" <?php if ($row->jual_tambang == 'pengumpul') {
                                                                                             echo "checked";
-                                                                                        } ?>>Pedangang/ pengumpul <br>
+                                                                                        } ?>> Pedangang/ pengumpul <br>
                             <input type="radio" name="jual_tambang" value="tidak" <?php if ($row->jual_tambang == 'tidak') {
                                                                                         echo "checked";
-                                                                                    } ?>>Tidak Ada <br>
+                                                                                    } ?>> Tidak Ada <br>
 
                         </div>
                         <div class="form-group">
-                            <label>Status kepemilikan rumah</label><br>
+                            <label>50. Status kepemilikan rumah</label><br>
                             <input type="radio" name="status_rumah" value="milik sendiri" <?php if ($row->status_rumah == 'milik sendiri') {
                                                                                                 echo "checked";
-                                                                                            } ?>>milik sendiri <br>
+                                                                                            } ?>> milik sendiri <br>
                             <input type="radio" name="status_rumah" value="milik orang tua" <?php if ($row->status_rumah == 'milik orang tua') {
                                                                                                 echo "checked";
-                                                                                            } ?>>milik orang tua<br>
+                                                                                            } ?>> Milik orang tua<br>
                             <input type="radio" name="status_rumah" value="mengontrak" <?php if ($row->status_rumah == 'mengontrak') {
                                                                                             echo "checked";
-                                                                                        } ?>>mengontrak <br>
+                                                                                        } ?>> Mengontrak <br>
                             <input type="radio" name="status_rumah" value="menumpang" <?php if ($row->status_rumah == 'menumpang') {
                                                                                             echo "checked";
-                                                                                        } ?>>menumpang <br>
+                                                                                        } ?>> Menumpang <br>
                         </div>
                         <div class="form-group">
-                            <label>Luas Bangunan</label>
+                            <label>51. Luas Bangunan</label>
                             <input type="textarea" name="luas_bangunan" class="form-control" value="<?= $row->luas_bangunan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Luas Lahan</label>
+                            <label>52. Luas Lahan</label>
                             <input type="textarea" name="luas_lahan" class="form-control" value="<?= $row->luas_lahan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Material Bangunan Rumah</label>
+                            <label>53. Tipe bangunan rumah</label><br>
+                            <input type="radio" name="tipe_bangunan" value="permanen" <?php if ($row->tipe_bangunan == 'permanen') {
+                                                                                            echo "checked";
+                                                                                        } ?>> Permanen <br>
+                            <input type="radio" name="tipe_bangunan" value="semi permanen" <?php if ($row->tipe_bangunan == 'semi permanen') {
+                                                                                            echo "checked";
+                                                                                        } ?>> Semi Permanen<br>
+                            <input type="radio" name="tipe_bangunan" value="tidak permanen" <?php if ($row->tipe_bangunan == 'tidak permanen') {
+                                                                                            echo "checked";
+                                                                                        } ?>> Tidak Permanen <br>
+                        </div>
+                        <div class="form-group">
+                            <label>54. Material Bangunan Rumah</label>
                             <input type="textarea" name="material_bangunan" class="form-control" value="<?= $row->material_bangunan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kondisi bangunan rumah</label><br>
+                            <label>55. Kondisi bangunan rumah</label><br>
                             <input type="radio" name="kondisi_bangunan" value="terawat" <?php if ($row->kondisi_bangunan == 'terawat') {
                                                                                             echo "checked";
-                                                                                        } ?>>Bagus & Terawat <br>
+                                                                                        } ?>> Bagus & Terawat <br>
                             <input type="radio" name="kondisi_bangunan" value="kurang" <?php if ($row->kondisi_bangunan == 'kurang') {
                                                                                             echo "checked";
                                                                                         } ?>> Kurang Terawat<br>
@@ -715,15 +738,15 @@
                                                                                         } ?>>Usang & Rusak <br>
                         </div>
                         <div class="form-group">
-                            <label>Tahun dibangun rumah</label>
+                            <label>56. Tahun dibangun rumah</label>
                             <input type="textarea" name="rumah_dibangun" class="form-control" value="<?= $row->rumah_dibangun ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Tahun dibangun mck</label>
+                            <label>57. Tahun dibangun mck</label>
                             <input type="textarea" name="mck_dibangun" class="form-control" value="<?= $row->mck_dibangun ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Sumber dana membangun rumah</label><br>
+                            <label>58. Sumber dana membangun rumah</label><br>
                             <input type="radio" name="sumber_dana" value="pribadi" <?php if ($row->sumber_dana == 'pribadi') {
                                                                                         echo "checked";
                                                                                     } ?>>Dana Pribadi <br>
@@ -741,11 +764,11 @@
                                                                                             } ?>>Bantuan Lainnya<br>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah orang di dalam rumah</label>
+                            <label>59. Jumlah orang di dalam rumah</label>
                             <input type="textarea" name="jumlah_orang" class="form-control" value="<?= $row->jumlah_orang ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Sirkulasi udara didalam rumah</label><br>
+                            <label>60. Sirkulasi udara didalam rumah</label><br>
                             <input type="radio" name="sirkulasi_rumah" value="ada" <?php if ($row->sirkulasi_rumah == 'ada') {
                                                                                         echo "checked";
                                                                                     } ?>>Ada
@@ -754,7 +777,7 @@
                                                                                         } ?>>Tidak ada
                         </div>
                         <div class="form-group">
-                            <label>Penerangan cahaya didalam rumah</label><br>
+                            <label>61. Penerangan cahaya didalam rumah</label><br>
                             <input type="radio" name="pencahayaan_rumah" value="baik" <?php if ($row->pencahayaan_rumah == 'baik') {
                                                                                             echo "checked";
                                                                                         } ?>>baik <br>
@@ -766,15 +789,15 @@
                                                                                         } ?>>buruk <br>
                         </div>
                         <div class="form-group">
-                            <label>Barang yang dimiliki</label>
+                            <label>62. Barang yang dimiliki</label>
                             <input type="textarea" name="barang_dimiliki" class="form-control" value="<?= $row->barang_dimiliki ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Total bangunan untuk usaha jasa dan perdagangan</label>
+                            <label>63. Total bangunan untuk usaha jasa dan perdagangan</label>
                             <input type="textarea" name="bangunan_usaha" class="form-control" value="<?= $row->bangunan_usaha ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Sumber penerangan yang di gunakan</label><br>
+                            <label>64. Sumber penerangan yang di gunakan</label><br>
                             <input type="radio" name="sumber_penerangan" value="pln" <?php if ($row->sumber_penerangan == 'pln') {
                                                                                             echo "checked";
                                                                                         } ?>>PLN<br>
@@ -796,7 +819,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Sumber air yang digunakan</label><br>
+                            <label>65. Sumber air yang digunakan</label><br>
                             <input type="radio" name="sumber_air" value="pdam" <?php if ($row->sumber_air == 'pdam') {
                                                                                     echo "checked";
                                                                                 } ?>>PDAM <br>
@@ -818,7 +841,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Sumber air untuk minum</label><br>
+                            <label>66. Sumber air untuk minum</label><br>
                             <input type="radio" name="air_minum" value="sungai" <?php if ($row->air_minum == 'sungai') {
                                                                                     echo "checked";
                                                                                 } ?>>Air Sungai <br>
@@ -843,7 +866,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Sarana mandi & buang air besar keluarga</label><br>
+                            <label>67. Sarana Mandi Untuk Keluarga</label><br>
                             <input type="radio" name="sarana_mandi" value="kamar mandi keluarga" <?php if ($row->sarana_mandi == 'kamar mandi keluarga') {
                                                                                                         echo "checked";
                                                                                                     } ?>>Kamar Mandi Keluarga <br>
@@ -861,7 +884,7 @@
                                                                                     } ?>>Tempat lainnya <br>
                         </div>
                         <div class="form-group">
-                            <label>Cara pengelolaan sampah rumah tangga </label><br>
+                            <label>68. Cara pengelolaan sampah rumah tangga </label><br>
                             <input type="radio" name="pengelolaan_sampah" value="petugas kebersihan" <?php if ($row->pengelolaan_sampah == 'petugas kebersihan') {
                                                                                                             echo "checked";
                                                                                                         } ?>>Diangkut Petugas Kebersihan <br>
@@ -880,7 +903,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Cara pengelolaan limbah cair rumah tangga</label><br>
+                            <label>69. Cara pengelolaan limbah cair rumah tangga</label><br>
                             <input type="radio" name="pengelolaan_cair" value="pembuangan septictank" <?php if ($row->pengelolaan_cair == 'pembuangan septictank') {
                                                                                                             echo "checked";
                                                                                                         } ?>>Membuat Sarana Pembuangan Septictank<br>
@@ -896,23 +919,23 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Jumlah Sepeda yang dimiliki</label>
+                            <label>70. Jumlah Sepeda yang dimiliki</label>
                             <input type="textarea" name="jumlah_sepeda" class="form-control" value="<?= $row->jumlah_sepeda ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah Motor yang dimiliki</label>
+                            <label>71. Jumlah Motor yang dimiliki</label>
                             <input type="textarea" name="jumlah_motor" class="form-control" value="<?= $row->jumlah_motor ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah Mobil yang dimiliki</label>
+                            <label>72. Jumlah Mobil yang dimiliki</label>
                             <input type="textarea" name="jumlah_mobil" class="form-control" value="<?= $row->jumlah_mobil ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah Truck yang dimiliki</label>
+                            <label>73. Jumlah Truck yang dimiliki</label>
                             <input type="textarea" name="jumlah_truck" class="form-control" value="<?= $row->jumlah_truck ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Jika tidak ada, apa transportasi yang di gunakan </label><br>
+                            <label>74. Jika tidak ada, apa transportasi yang di gunakan </label><br>
                             <input type="radio" name="transportasi" value="umum" <?php if ($row->transportasi == 'umum') {
                                                                                         echo "checked";
                                                                                     } ?>>Angkutan Umum<br>
@@ -930,19 +953,19 @@
                                                                                     } ?>>tidak <br>
                         </div>
                         <div class="form-group">
-                            <label>Apakah bapak/ibu menggunakan hp ? jika iya berapa jumlahnya</label>
+                            <label>75. Apakah bapak/ibu menggunakan hp ? jika iya berapa jumlahnya</label>
                             <input type="textarea" name="menggunakan_hp" class="form-control" value="<?= $row->menggunakan_hp ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah uang yang terima dari hasil pembebasan lahan ?</label>
+                            <label>76. Jumlah uang yang terima dari hasil pembebasan lahan ?</label>
                             <input type="textarea" name="uang_lahan" class="form-control" value="<?= $row->uang_lahan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Digunakan untuk apa uang tersebut</label>
+                            <label>77. Digunakan untuk apa uang tersebut</label>
                             <input type="textarea" name="alasan_lahan" class="form-control" value="<?= $row->alasan_lahan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah bapak/ibu berdagang? </label><br>
+                            <label>78. Apakah bapak/ibu berdagang? </label><br>
                             <input type="radio" name="usaha_dagang" value="iya" <?php if ($row->usaha_dagang == 'iya') {
                                                                                     echo "checked";
                                                                                 } ?>>Iya<br>
@@ -951,11 +974,11 @@
                                                                                     } ?>>Tidak<br>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah omzet yang di dapatkan</label>
+                            <label>79. Jumlah omzet yang di dapatkan</label>
                             <input type="textarea" name="omzet_dagang" class="form-control" value="<?= $row->omzet_dagang ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah bapak/ibu mendapatkan gaji ? </label><br>
+                            <label>80. Apakah bapak/ibu mendapatkan gaji ? </label><br>
                             <input type="radio" name="gaji_perbulan" value="iya" <?php if ($row->gaji_perbulan == 'iya') {
                                                                                         echo "checked";
                                                                                     } ?>>Iya<br>
@@ -964,11 +987,11 @@
                                                                                     } ?>>Tidak<br>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah gaji yang di dapatkan</label>
+                            <label>81. Jumlah gaji yang di dapatkan</label>
                             <input type="textarea" name="jumlah_gaji" class="form-control" value="<?= $row->jumlah_gaji ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah bapak/ibu mendapatkan kiriman dari anak/kerabat? </label><br>
+                            <label>82. Apakah bapak/ibu mendapatkan kiriman dari anak/kerabat? </label><br>
                             <input type="radio" name="kiriman_lain" value="iya" <?php if ($row->kiriman_lain == 'iya') {
                                                                                     echo "checked";
                                                                                 } ?>>Iya<br>
@@ -977,11 +1000,11 @@
                                                                                     } ?>>Tidak<br>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah kiriman lain yang di dapatkan</label>
+                            <label>83. Jumlah kiriman lain yang di dapatkan</label>
                             <input type="textarea" name="jumlah_kiriman" class="form-control" value="<?= $row->jumlah_kiriman ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah bapak/ibu mendapatkan dana pensiun? </label><br>
+                            <label>84. Apakah bapak/ibu mendapatkan dana pensiun? </label><br>
                             <input type="radio" name="dana_pensiun" value="iya" <?php if ($row->dana_pensiun == 'iya') {
                                                                                     echo "checked";
                                                                                 } ?>>Iya<br>
@@ -990,11 +1013,11 @@
                                                                                     } ?>>Tidak<br>
                         </div>
                         <div class="form-group">
-                            <label>Jumlah dana pensiun yang didapatkan</label>
+                            <label>85. Jumlah dana pensiun yang didapatkan</label>
                             <input type="textarea" name="jumlah_dana_pensiun" class="form-control" value="<?= $row->jumlah_dana_pensiun ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah ada dana lain selain dana yang sudah di sebutkan diatas ?? </label><br>
+                            <label>86. Apakah ada dana lain selain dana yang sudah di sebutkan diatas ?? </label><br>
                             <input type="radio" name="sumber_lain" value="iya" <?php if ($row->sumber_lain == 'iya') {
                                                                                     echo "checked";
                                                                                 } ?>>Iya<br>
@@ -1003,19 +1026,19 @@
                                                                                     } ?>>Tidak<br>
                         </div>
                         <div class="form-group">
-                            <label>Jelaskan sumber dana yang di dapatkan serta jumlahnya</label>
+                            <label>87. Jelaskan sumber dana yang di dapatkan serta jumlahnya</label>
                             <input type="textarea" name="jumlah_sumber" class="form-control" value="<?= $row->jumlah_sumber ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Total keseluruhan pendapatan rumah tangga per bulan</label>
+                            <label>88. Total keseluruhan pendapatan rumah tangga per bulan</label>
                             <input type="textarea" name="total_keseluruhan" class="form-control" value="<?= $row->total_keseluruhan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Total pengeluaran setiap bulan nya</label>
+                            <label>89. Total pengeluaran setiap bulan nya</label>
                             <input type="textarea" name="pengeluaran_sebulan" class="form-control" value="<?= $row->pengeluaran_sebulan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Jika dibandingkan tahun sebelumnya, bagimana tingkat pendapat bapak/ibu saat ini ?</label><br>
+                            <label>90. Jika dibandingkan tahun sebelumnya, bagimana tingkat pendapat bapak/ibu saat ini ?</label><br>
                             <input type="radio" name="banding_pendapatan" value="meningkat" <?php if ($row->banding_pendapatan == 'meningkat') {
                                                                                                 echo "checked";
                                                                                             } ?>>Meningkat<br>
@@ -1027,11 +1050,11 @@
                                                                                             } ?>>Menurun<br>
                         </div>
                         <div class="form-group">
-                            <label>Jelaskan alasan nya?</label>
+                            <label>91. Jelaskan alasan nya?</label>
                             <input type="textarea" name="alasan_banding" class="form-control" value="<?= $row->alasan_banding ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah pendapatan tersebut cukup untuk memenuhi keubuthan sehari-hari?</label><br>
+                            <label>92. Apakah pendapatan tersebut cukup untuk memenuhi kebutuhan sehari-hari?</label><br>
                             <input type="radio" name="pendapatan_cukup" value="lebih" <?php if ($row->pendapatan_cukup == 'lebih') {
                                                                                             echo "checked";
                                                                                         } ?>>Lebih<br>
@@ -1043,15 +1066,15 @@
                                                                                         } ?>>Kurang<br>
                         </div>
                         <div class="form-group">
-                            <label>Jelaskan alasan nya?</label>
+                            <label>93. Jelaskan alasan nya?</label>
                             <input type="textarea" name="alasan_pendapat" class="form-control" value="<?= $row->alasan_pendapat ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kesulitan masalah ekonomi yang dihadapi</label>
+                            <label>94. Kesulitan masalah ekonomi yang dihadapi</label>
                             <input type="textarea" name="masalah_ekonomi" class="form-control" value="<?= $row->masalah_ekonomi ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Dalam bentuk apa biasanya bapak/ibu mendapatkan bantuan</label><br>
+                            <label>95. Dalam bentuk apa biasanya bapak/ibu mendapatkan bantuan</label><br>
                             <input type="radio" name="bentuk_bantuan" value="uang" <?php if ($row->bentuk_bantuan == 'uang') {
                                                                                         echo "checked";
                                                                                     } ?>>Uang<br>
@@ -1064,10 +1087,13 @@
                             <input type="radio" name="bentuk_bantuan" value="lainnya" <?php if ($row->bentuk_bantuan == 'lainnya') {
                                                                                             echo "checked";
                                                                                         } ?>>Kebutuhan lainnya<br>
+                            <input type="radio" name="bentuk_bantuan" value="tidak pernah" <?php if ($row->bentuk_bantuan == 'tidak pernah') {
+                                                                                            echo "checked";
+                                                                                        } ?>>Tidak Pernah Mendapatkan Bantuan
 
                         </div>
                         <div class="form-group">
-                            <label>Apakah bapak/ibu memiliki rekening?</label><br>
+                            <label>96. Apakah bapak/ibu memiliki rekening?</label><br>
                             <input type="radio" name="punya_rekening" value="iya" <?php if ($row->punya_rekening == 'iya') {
                                                                                         echo "checked";
                                                                                     } ?>>Iya<br>
@@ -1076,7 +1102,7 @@
                                                                                     } ?>>Tidak<br>
                         </div>
                         <div class="form-group">
-                            <label>Jika memerlukan pinjaman karena mendesak/penting, dari mana ibu/bapak biasanya meminjam uang</label><br>
+                            <label>97. Jika memerlukan pinjaman karena mendesak/penting, dari mana ibu/bapak biasanya meminjam uang</label><br>
                             <input type="radio" name="pinjaman_mendesak" value="bank" <?php if ($row->pinjaman_mendesak == 'bank') {
                                                                                             echo "checked";
                                                                                         } ?>>Bank<br>
@@ -1092,20 +1118,23 @@
                             <input type="radio" name="pinjaman_mendesak" value="rentenir" <?php if ($row->pinjaman_mendesak == 'rentenir') {
                                                                                                 echo "checked";
                                                                                             } ?>>Rentenir<br>
+                            <input type="radio" name="pinjaman_mendesak" value="toke" <?php if ($row->pinjaman_mendesak == 'toke') {
+                                                                                                echo "checked";
+                                                                                            } ?>>Toke<br>
                             <input type="radio" name="pinjaman_mendesak" value="lainnya" <?php if ($row->pinjaman_mendesak == 'lainnya') {
                                                                                                 echo "checked";
-                                                                                            } ?>>lainnya<br>
+                                                                                            } ?>>Pinjaman Lainnya<br>
                             <input type="radio" name="pinjaman_mendesak" value="tidak" <?php if ($row->pinjaman_mendesak == 'tidak') {
                                                                                             echo "checked";
                                                                                         } ?>>Tidak Pernah<br>
 
                         </div>
                         <div class="form-group">
-                            <label>Alasan keperluan meminjam ?</label>
+                            <label>98. Alasan keperluan meminjam ?</label>
                             <input type="textarea" name="keperluan_meminjam" class="form-control" value="<?= $row->keperluan_meminjam ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah di daerah ini dilakukan kerjasama/gotong royong untuk lingkungan?</label><br>
+                            <label>99. Apakah di daerah ini dilakukan kerjasama/gotong royong untuk lingkungan?</label><br>
                             <input type="radio" name="kerjasama_lingkungan" value="ada" <?php if ($row->kerjasama_lingkungan == 'ada') {
                                                                                             echo "checked";
                                                                                         } ?>>Ada<br>
@@ -1114,7 +1143,7 @@
                                                                                             } ?>>Tidak ada<br>
                         </div>
                         <div class="form-group">
-                            <label>Jika ada berapa kali diadakan</label><br>
+                            <label>100. Jika ada berapa kali diadakan</label><br>
                             <input type="radio" name="banyak_kerjasama" value="1 bulan" <?php if ($row->banyak_kerjasama == '1 bulan') {
                                                                                             echo "checked";
                                                                                         } ?>>1 Bulan Sekali<br>
@@ -1129,7 +1158,7 @@
                                                                                         } ?>>1 Tahun Sekali<br>
                         </div>
                         <div class="form-group">
-                            <label>Bagaimana partisipasi bapak/ibu dalam kegiatan gotong royong</label><br>
+                            <label>101. Bagaimana partisipasi bapak/ibu dalam kegiatan gotong royong</label><br>
                             <input type="radio" name="partisipasi_kerjasama" value="sering" <?php if ($row->partisipasi_kerjasama == 'sering') {
                                                                                                 echo "checked";
                                                                                             } ?>>Selalu Ikut<br>
@@ -1141,15 +1170,15 @@
                                                                                             } ?>>Tidak pernah<br>
                         </div>
                         <div class="form-group">
-                            <label>Kegiatan sosial kemasyarakatan yang aktif dilakukan</label>
+                            <label>102. Kegiatan sosial kemasyarakatan yang aktif dilakukan</label>
                             <input type="textarea" name="kegiatan_aktif" class="form-control" value="<?= $row->kegiatan_aktif ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Kegiatan sosial agama yang aktif dilakukan</label>
+                            <label>103. Kegiatan sosial agama yang aktif dilakukan</label>
                             <input type="textarea" name="kegiatan_agama" class="form-control" value="<?= $row->kegiatan_agama ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Dari manakah sumber informasi yang di dapat mengenai pertanian, pelayanan kesehatan,lapangan kerja dan lain-lainya</label><br>
+                            <label>104. Dari manakah sumber informasi yang di dapat mengenai pertanian, pelayanan kesehatan,lapangan kerja dan lain-lainya</label><br>
                             <input type="checkbox" name="sumber_pengetahuan" value="papan pengumuman" <?php if ($row->sumber_pengetahuan == 'papan pengumuman') {
                                                                                                             echo "checked";
                                                                                                         } ?>>Papan Pengumuman<br>
@@ -1171,9 +1200,12 @@
                             <input type="checkbox" name="sumber_pengetahuan" value="tokoh masyarakat" <?php if ($row->sumber_pengetahuan == 'tokoh masyarakat') {
                                                                                                             echo "checked";
                                                                                                         } ?>>Tokoh Masyarakat<br>
+                            <input type="checkbox" name="sumber_pengetahuan" value="aparat desa" <?php if ($row->sumber_pengetahuan == 'aparat desa') {
+                                                                                                            echo "checked";
+                                                                                                        } ?>>Aparat Desa
                         </div>
                         <div class="form-group">
-                            <label>Apakah bapak/ibu ikut terlibat organisasi?</label><br>
+                            <label>105. Apakah bapak/ibu ikut terlibat organisasi?</label><br>
                             <input type="radio" name="terlibat_organisasi" value="ikut" <?php if ($row->terlibat_organisasi == 'ikut') {
                                                                                             echo "checked";
                                                                                         } ?>>Ikut<br>
@@ -1182,7 +1214,7 @@
                                                                                             } ?>>Tidak <br>
                         </div>
                         <div class="form-group">
-                            <label>Jenis organisasi yang diikuti</label><br>
+                            <label>106. Jenis organisasi yang diikuti</label><br>
                             <input type="radio" name="nama_organisasi" value="kepemudaan" <?php if ($row->nama_organisasi == 'kepemudaan') {
                                                                                                 echo "checked";
                                                                                             } ?>>Kepemudaan <br>
@@ -1211,7 +1243,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Posisi anda di dalam organisasi</label><br>
+                            <label>107. Posisi anda di dalam organisasi</label><br>
                             <input type="radio" name="posisi_organisasi" value="ketua" <?php if ($row->posisi_organisasi == 'ketua') {
                                                                                             echo "checked";
                                                                                         } ?>>Ketua <br>
@@ -1227,7 +1259,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Partisipasi anda di dalam organisasi</label><br>
+                            <label>108. Partisipasi anda di dalam organisasi</label><br>
                             <input type="radio" name="tingkat_partisipasi" value="aktif" <?php if ($row->tingkat_partisipasi == 'aktif') {
                                                                                                 echo "checked";
                                                                                             } ?>>Aktif <br>
@@ -1243,11 +1275,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Manfaat dari organisasi yang dilakukan</label>
+                            <label>109. Manfaat dari organisasi yang dilakukan</label>
                             <input type="textarea" name="manfaat_organisasi" class="form-control" value="<?= $row->manfaat_organisasi ?>">
                         </div>
                         <div class="form-group">
-                            <label>Bagaimana kondisi keamanan lingkungan daerah ini</label><br>
+                            <label>110. Bagaimana kondisi keamanan lingkungan daerah ini</label><br>
                             <input type="radio" name="keamanan_lingkungan" value="aman" <?php if ($row->keamanan_lingkungan == 'aman') {
                                                                                             echo "checked";
                                                                                         } ?>>Aman <br>
@@ -1259,11 +1291,11 @@
                                                                                                 } ?>>Kurang Aman <br>
                         </div>
                         <div class="form-group">
-                            <label>Alasan Keamanan</label>
+                            <label>111. Alasan Keamanan</label>
                             <input type="textarea" name="alasan_keamanan" class="form-control" value="<?= $row->alasan_keamanan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Apakah pernah terjadi konflik di daerah ini ?</label><br>
+                            <label>112. Apakah pernah terjadi konflik di daerah ini ?</label><br>
                             <input type="radio" name="pernah_konflik" value="sering" <?php if ($row->pernah_konflik == 'sering') {
                                                                                             echo "checked";
                                                                                         } ?>>Ya, Sering <br>
@@ -1275,7 +1307,7 @@
                                                                                     } ?>>Tidak Pernah <br>
                         </div>
                         <div class="form-group">
-                            <label>Apa alasan konflik terjadi?</label><br>
+                            <label>113. Apa alasan konflik terjadi?</label><br>
                             <input type="radio" name="alasan_konflik" value="perebutan tanah" <?php if ($row->alasan_konflik == 'perebutan tanah') {
                                                                                                     echo "checked";
                                                                                                 } ?>>Perebutan Tanah <br>
@@ -1300,92 +1332,101 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Siapa saja pihak yang terlibat konflik?</label><br>
+                            <label>114. Siapa saja pihak yang terlibat konflik?</label><br>
                             <input type="radio" name="terlibat_konflik" value="antar kelompok masyarakat" <?php if ($row->terlibat_konflik == 'antar kelompok masyarakat') {
                                                                                                                 echo "checked";
-                                                                                                            } ?>>antar kelompok masyarakat <br>
+                                                                                                            } ?>>Antar Kelompok Masyarakat <br>
                             <input type="radio" name="terlibat_konflik" value="antar tetangga" <?php if ($row->terlibat_konflik == 'antar tetangga') {
                                                                                                     echo "checked";
-                                                                                                } ?>>antar tetangga <br>
+                                                                                                } ?>>Antar Tetangga <br>
                             <input type="radio" name="terlibat_konflik" value="antar kelompok remaja" <?php if ($row->terlibat_konflik == 'antar kelompok remaja') {
                                                                                                             echo "checked";
-                                                                                                        } ?>>antar kelompok remaja<br>
+                                                                                                        } ?>>Antar Kelompok Remaja<br>
                             <input type="radio" name="terlibat_konflik" value="antar keluarga" <?php if ($row->terlibat_konflik == 'antar keluarga') {
                                                                                                     echo "checked";
-                                                                                                } ?>>antar keluarga<br>
+                                                                                                } ?>>Antar Keluarga<br>
                             <input type="radio" name="terlibat_konflik" value="antar kampung" <?php if ($row->terlibat_konflik == 'antar kampung') {
                                                                                                     echo "checked";
-                                                                                                } ?>> antar kampung<br>
+                                                                                                } ?>>Antar kampung<br>
                             <input type="radio" name="terlibat_konflik" value="masyarakat vs perusahaan" <?php if ($row->terlibat_konflik == 'masyarakat vs perusahaan') {
                                                                                                                 echo "checked";
-                                                                                                            } ?>> masyarakat vs perusahaan <br>
+                                                                                                            } ?>>Masyarakat VS Perusahaan <br>
                             <input type="radio" name="terlibat_konflik" value="lainnya" <?php if ($row->terlibat_konflik == 'lainnya') {
                                                                                             echo "checked";
                                                                                         } ?>>Lainnya <br>
+                            <input type="radio" name="terlibat_konflik" value="tidak pernah" <?php if ($row->terlibat_konflik == 'tidak pernah') {
+                                                                                            echo "checked";
+                                                                                        } ?>>Tidak pernah 
 
                         </div>
                         <div class="form-group">
-                            <label>Pihak mana yang menyelesaikan konflik?</label><br>
+                            <label>115. Pihak mana yang menyelesaikan konflik?</label><br>
                             <input type="radio" name="pihak_konflik" value="aparat pemerintah" <?php if ($row->pihak_konflik == 'aparat pemerintah') {
                                                                                                     echo "checked";
-                                                                                                } ?>> aparat pemerintah <br>
+                                                                                                } ?>> Aparat Pemerintah <br>
                             <input type="radio" name="pihak_konflik" value="tokoh masyarakat" <?php if ($row->pihak_konflik == 'tokoh masyarakat') {
                                                                                                     echo "checked";
-                                                                                                } ?>> tokoh masyarakat <br>
+                                                                                                } ?>> Tokoh Masyarakat <br>
                             <input type="radio" name="pihak_konflik" value="aparat keamanan" <?php if ($row->pihak_konflik == 'aparat keamanan') {
                                                                                                     echo "checked";
-                                                                                                } ?>> aparat keamanan<br>
+                                                                                                } ?>> Aparat Keamanan<br>
+                            <input type="radio" name="pihak_konflik" value="tidak pernah" <?php if ($row->pihak_konflik == 'tidak pernah') {
+                                                                                            echo "checked";
+                                                                                        } ?>> Tidak Pernah 
                         </div>
                         <div class="form-group">
-                            <label>Mekanisme penyelesaian konflik</label><br>
+                            <label>116. Mekanisme penyelesaian konflik</label><br>
                             <input type="radio" name="mekanisme_konflik" value="secara kekeluargaan" <?php if ($row->mekanisme_konflik == 'secara kekeluargaan') {
                                                                                                             echo "checked";
-                                                                                                        } ?>> secara kekeluargaan <br>
+                                                                                                        } ?>> Secara Kekeluargaan <br>
                             <input type="radio" name="mekanisme_konflik" value="musyawarah warga" <?php if ($row->mekanisme_konflik == ' musyawarah warga') {
                                                                                                         echo "checked";
-                                                                                                    } ?>> musyawarah warga <br>
+                                                                                                    } ?>> Musyawarah Warga <br>
                             <input type="radio" name="mekanisme_konflik" value="jalur hukum" <?php if ($row->mekanisme_konflik == 'jalur hukum') {
                                                                                                     echo "checked";
-                                                                                                } ?>>jalur hukum<br>
+                                                                                                } ?>> Jalur Hukum<br>
                             <input type="radio" name="mekanisme_konflik" value="secara adat" <?php if ($row->mekanisme_konflik == 'secara adat') {
                                                                                                     echo "checked";
-                                                                                                } ?>>secara adat<br>
+                                                                                                } ?>>Secara Adat<br>
                             <input type="radio" name="mekanisme_konflik" value="lainnya" <?php if ($row->mekanisme_konflik == 'lainnya') {
                                                                                                 echo "checked";
                                                                                             } ?>>Lainnya<br>
+                            <input type="radio" name="mekanisme_konflik" value="tidak pernah" <?php if ($row->mekanisme_konflik == 'tidak pernah') {
+                                                                                            echo "checked";
+                                                                                        } ?>>Tidak Pernah 
 
                         </div>
                         <div class="form-group">
-                            <label>Bencana alam yang terjadi</label><br>
+                            <label>117. Bencana alam yang terjadi</label><br>
                             <input type="radio" name="bencana_alam" value="banjir" <?php if ($row->bencana_alam == 'banjir') {
                                                                                         echo "checked";
-                                                                                    } ?>> banjir <br>
+                                                                                    } ?>> Banjir <br>
                             <input type="radio" name="bencana_alam" value="gempa" <?php if ($row->bencana_alam == 'gempa') {
                                                                                         echo "checked";
-                                                                                    } ?>>gempa <br>
+                                                                                    } ?>> Gempa <br>
                             <input type="radio" name="bencana_alam" value="longsor" <?php if ($row->bencana_alam == ' longsor') {
                                                                                         echo "checked";
-                                                                                    } ?>> longsor<br>
+                                                                                    } ?>> Longsor<br>
                             <input type="radio" name="bencana_alam" value="kebakaran" <?php if ($row->bencana_alam == 'kebakaran') {
                                                                                             echo "checked";
-                                                                                        } ?>>kebakaran<br>
+                                                                                        } ?>> Kebakaran<br>
                             <input type="radio" name="bencana_alam" value="lainnya" <?php if ($row->bencana_alam == 'lainnya') {
                                                                                         echo "checked";
-                                                                                    } ?>>lainnya<br>
+                                                                                    } ?>> Bencana Lainnya<br>
                             <input type="radio" name="bencana_alam" value="tidak" <?php if ($row->bencana_alam == 'tidak') {
                                                                                         echo "checked";
-                                                                                    } ?>>tidak ada<br>
+                                                                                    } ?>> Tidak Ada<br>
                         </div>
                         <div class="form-group">
-                            <label>Bagaimana pendapat bapak/ibu tentang perusahaan SERD</label>
+                            <label>118. Bagaimana pendapat bapak/ibu tentang perusahaan SERD</label>
                             <input type="textarea" name="pendapat_serd" class="form-control" value="<?= $row->pendapat_serd ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Program atau bantuan apa saja yang pernah di berikan kepada PAP</label>
+                            <label>119. Program atau bantuan apa saja yang pernah di berikan kepada PAP</label>
                             <input type="textarea" name="manfaat_serd" class="form-control" value="<?= $row->manfaat_serd ?>" required>
                         </div>
                         <div class="form-group">
-                            <label>Saran dan harapan bapak/ibu kepada perusahaan serd</label>
+                            <label>120. Saran dan harapan bapak/ibu kepada perusahaan serd</label>
                             <input type="textarea" name="saran_serd" class="form-control" value="<?= $row->saran_serd ?>" required>
                         </div>
                         <div class="form-group">
