@@ -76,7 +76,7 @@ class Form_m extends CI_Model
             'status_rumah' => $post['status_rumah'],
             'luas_bangunan' => $post['luas_bangunan'],
             'luas_lahan' => $post['luas_lahan'],
-            'tipe_bangunan' => $post ['tipe_bangunan'],
+            'tipe_bangunan' => $post['tipe_bangunan'],
             'material_bangunan' => $post['material_bangunan'],
             'kondisi_bangunan' => $post['kondisi_bangunan'],
             'rumah_dibangun' => $post['rumah_dibangun'],
@@ -203,7 +203,7 @@ class Form_m extends CI_Model
             'status_rumah' => $post['status_rumah'],
             'luas_bangunan' => $post['luas_bangunan'],
             'luas_lahan' => $post['luas_lahan'],
-            'tipe_bangunan' => $post ['tipe_bangunan'],
+            'tipe_bangunan' => $post['tipe_bangunan'],
             'material_bangunan' => $post['material_bangunan'],
             'kondisi_bangunan' => $post['kondisi_bangunan'],
             'rumah_dibangun' => $post['rumah_dibangun'],
@@ -452,8 +452,61 @@ class Form_m extends CI_Model
                         count(if(bentuk_bantuan='bentuk lainnya',bentuk_bantuan, NULL)) as bentuk_lainnya,
                         count(if(bentuk_bantuan='tidak pernah',bentuk_bantuan, NULL)) as bentuk_tidak,
 
-                        count(if(punya_rekening='iya',bentuk_bantuan, NULL)) as punya_iya,
-                        count(if(punya_rekening='tidak',bentuk_bantuan, NULL)) as punya_tidak
+                        count(if(punya_rekening='iya',punya_rekening, NULL)) as punya_iya,
+                        count(if(punya_rekening='tidak',punya_rekening, NULL)) as punya_tidak,
+
+                        count(if(kerjasama_lingkungan='ada',kerjasama_lingkungan, NULL)) as kerjasama_ada,
+                        count(if(kerjasama_lingkungan='tidak',kerjasama_lingkungan, NULL)) as kerjasama_tidak,
+
+                        count(if(partisipasi_kerjasama='sering',partisipasi_kerjasama, NULL)) as partisipasi_sering,
+                        count(if(partisipasi_kerjasama='kadang',partisipasi_kerjasama, NULL)) as partisipasi_kadang,
+                        count(if(partisipasi_kerjasama='absen',partisipasi_kerjasama, NULL)) as partisipasi_absen,
+
+                        count(if(sumber_pengetahuan='papan pengumuman',sumber_pengetahuan, NULL)) as sumber_papan,
+                        count(if(sumber_pengetahuan='selebaran',sumber_pengetahuan, NULL)) as sumber_selebaran,
+                        count(if(sumber_pengetahuan='radio',sumber_pengetahuan, NULL)) as sumber_radio,
+                        count(if(sumber_pengetahuan='televisi',sumber_pengetahuan, NULL)) as sumber_televisi,
+                        count(if(sumber_pengetahuan='media sosial',sumber_pengetahuan, NULL)) as sumber_media,
+                        count(if(sumber_pengetahuan='internet',sumber_pengetahuan, NULL)) as sumber_internet,
+                        count(if(sumber_pengetahuan='tokoh masyarakat',sumber_pengetahuan, NULL)) as sumber_tokoh,
+                        count(if(sumber_pengetahuan='aparat desa',sumber_pengetahuan, NULL)) as sumber_aparat,
+
+                        count(if(terlibat_organisasi='ikut',terlibat_organisasi, NULL)) as terlibat_ikut,
+                        count(if(terlibat_organisasi='tidak',terlibat_organisasi, NULL)) as terlibat_tidak,
+
+                        count(if(nama_organisasi='kepemudaan',nama_organisasi, NULL)) as nama_kepemudaan,
+                        count(if(nama_organisasi='keagamaan',nama_organisasi, NULL)) as nama_keagamaan,
+                        count(if(nama_organisasi='kesukuan',nama_organisasi, NULL)) as nama_kesukuan,
+                        count(if(nama_organisasi='profesi',nama_organisasi, NULL)) as nama_profesi,
+                        count(if(nama_organisasi='hobi',nama_organisasi, NULL)) as nama_hobi,
+                        count(if(nama_organisasi='pkk',nama_organisasi, NULL)) as nama_pkk,
+                        count(if(nama_organisasi='lainnya',nama_organisasi, NULL)) as nama_lainnya,
+                        count(if(nama_organisasi='tidak',nama_organisasi, NULL)) as nama_tidak,
+
+                        count(if(tingkat_partisipasi='aktif',tingkat_partisipasi, NULL)) as tingkat_aktif,
+                        count(if(tingkat_partisipasi='kurang',tingkat_partisipasi, NULL)) as tingkat_kurang,
+                        count(if(tingkat_partisipasi='tidak_aktif',tingkat_partisipasi, NULL)) as tingkat_tidak,
+                        count(if(tingkat_partisipasi='tidak_terlibat',tingkat_partisipasi, NULL)) as tingkat_terlibat
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+
+
+
+
 
 
 
